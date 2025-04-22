@@ -10,9 +10,9 @@ import SkillsSection from "../home/skills-section.astro"; // Reusing SkillsSecti
 >
   <PageHeading title='About <span class="text-blue-500">Me</span>' />
 
-  <!-- Profile image - responsive sizing -->
+  <!-- Profile image - hidden on mobile, visible on tablet and above -->
   <div
-    class="relative z-30 w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[333px] md:h-[333px] my-6 sm:my-10 rounded-full overflow-hidden shadow-md top-0 left-1/2 transform -translate-x-1/2"
+    class="hidden sm:block relative z-30 w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[333px] md:h-[333px] my-6 sm:my-10 rounded-full overflow-hidden shadow-md top-0 left-1/2 transform -translate-x-1/2"
   >
     <img
       src="/assets/images/me.jpeg"
@@ -22,25 +22,26 @@ import SkillsSection from "../home/skills-section.astro"; // Reusing SkillsSecti
   </div>
 
   <p
-    class="text-sm sm:text-base md:text-lg leading-relaxed text-black dark:text-white"
+    class="text-sm sm:text-base md:text-lg leading-relaxed text-black dark:text-white mt-4 sm:mt-0"
   >
-    Hello! I’m <strong>Venkata Sai Chaitanya Tatikonda</strong>, a Master’s
-    student in Information Technology at Florida State University, where I’m
-    proud to maintain a perfect 4.0 GPA. <br /><br />
+    Hello, I'm <strong>Venkata Sai Chaitanya Tatikonda</strong>, a master's
+    student in Information Technology at <strong
+      >Florida State University</strong
+    >, where I'm proud to maintain a <strong>4.0 GPA</strong>. <br /><br />
 
     As a web developer, I specialize in creating user-focused digital
     experiences that blend modern design with reliable functionality. My
-    background in frontend development, combined with my growing expertise in
+    background in frontend development, combined with growing expertise in
     full-stack development and GenAI, allows me to offer end-to-end solutions
     for a wide variety of projects. <br /><br />
 
-    Over the years, I’ve had the opportunity to collaborate with startups,
+    Over the years, I've had the opportunity to collaborate with startups,
     mid-sized companies, and large enterprises, providing me with a diverse
-    perspective and a strong foundation in software development. My experiences
-    as a teaching assistant have further helped me develop skills in effective
-    communication and teamwork. <br /><br />
+    perspective and a strong foundation in software development. My experience
+    as a teaching assistant has helped me develop skills in communication and
+    teamwork. <br /><br />
 
-    Outside of my technical pursuits, I’m passionate about photography, which
+    Outside of my technical pursuits, I'm passionate about photography, which
     serves as both a creative outlet and an influence on my design approach.
   </p>
 

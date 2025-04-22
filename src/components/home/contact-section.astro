@@ -1,0 +1,93 @@
+---
+import { Icon } from "astro-icon/components";
+import PageHeading from "../ui/page-heading.astro";
+---
+
+<section
+  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+>
+  <PageHeading
+    title='Contact <span class="text-blue-500">Me</span>'
+    description="Feel free to reach out to me via email or connect on LinkedIn. You can also explore my projects on GitHub and read my blogs on Hashnode."
+  />
+
+  <div class="z-50 flex flex-wrap justify-center gap-6 mt-8">
+    <!-- Email -->
+    <a
+      href="mailto:tvschaitanya@outlook.com"
+      class="flex flex-col items-center group"
+    >
+      <div
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mb-2 text-gray-800 dark:text-gray-200 group-hover:scale-110 transition"
+      >
+        <Icon
+          name="mdi:email"
+          class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current"
+        />
+      </div>
+      <p class="text-sm text-center text-gray-700 dark:text-neutral-300">
+        Email
+      </p>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+      href="https://www.linkedin.com/in/tvschaitanya"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex flex-col items-center group"
+    >
+      <div
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mb-2 text-[#2962FF] dark:text-[#2962FF] group-hover:scale-110 transition"
+      >
+        <Icon
+          name="mdi:linkedin"
+          class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current"
+        />
+      </div>
+      <p class="text-sm text-center text-gray-700 dark:text-neutral-300">
+        LinkedIn
+      </p>
+    </a>
+
+    <!-- GitHub -->
+    <a
+      href="https://github.com/tvschaitanya"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex flex-col items-center group"
+    >
+      <div
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mb-2 text-gray-800 dark:text-gray-100 group-hover:scale-110 transition"
+      >
+        <Icon
+          name="mdi:github"
+          class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current"
+        />
+      </div>
+      <p class="text-sm text-center text-gray-700 dark:text-neutral-300">
+        GitHub
+      </p>
+    </a>
+
+    <!-- Hashnode -->
+    <a
+      href="https://tvschaitanya.hashnode.dev/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex flex-col items-center group"
+    >
+      <div
+        class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center mb-2 text-[#2962FF] dark:text-[#2962FF] group-hover:scale-110 transition"
+      >
+        <Icon
+          name="simple-icons:hashnode"
+          class="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 text-current"
+        />
+      </div>
+      <p class="text-sm text-center text-gray-700 dark:text-neutral-300">
+        Hashnode
+      </p>
+    </a>
+  </div>
+</section>

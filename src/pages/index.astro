@@ -1,0 +1,47 @@
+---
+import Button from "../components/ui/button.astro";
+import Separator from "../components/ui/separator.astro";
+import Layout from "../layouts/main.astro";
+import AboutSection from "../components/home/about-section.astro";
+import ProjectsSection from "../components/home/projects-section.astro";
+import ContactSection from "../components/home/contact-section.astro";
+import HeroSection from "../components/home/hero-section.astro";
+---
+
+<Layout title="Chaitanya's Portfolio">
+  <!-- Hero Section -->
+  <HeroSection />
+
+  <!-- About Section -->
+  <Separator text="About Me" />
+  <div id="about" class="py-12">
+    <AboutSection />
+  </div>
+
+  <!-- Projects Section -->
+  <Separator text="My Projects" />
+  <div id="projects" class="py-12">
+    <ProjectsSection />
+  </div>
+
+  <!-- Contact Section -->
+  <Separator text="Contact Me" />
+  <div id="contact" class="py-12">
+    <ContactSection />
+  </div>
+</Layout>
+
+<style>
+  /* Custom CSS for improved dotted borders */
+  [class*="border-dashed"] {
+    border-style: dashed;
+    border-width: 2px;
+  }
+
+  /* Fix for mobile overflow issue */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+</style>

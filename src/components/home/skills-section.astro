@@ -1,0 +1,534 @@
+---
+import { Icon } from "astro-icon/components";
+import PageHeading from "../ui/page-heading.astro"; // Reusing PageHeading component for consistency
+---
+
+<section
+  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+>
+  <PageHeading title='Tech <span class="text-blue-500">Stack</span>' />
+
+  <!-- Frontend Development Section -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <h3 class="text-xl font-semibold dark:text-neutral-300">
+        Frontend Development
+      </h3>
+    </div>
+    <!-- Section Divider -->
+    <div class="w-full h-px bg-neutral-200 dark:bg-neutral-700 mt-2 mb-6"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <!-- React (Most Popular) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#61DAFB]"
+        >
+          <Icon name="simple-icons:react" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          React.js
+        </p>
+      </div>
+
+      <!-- TypeScript (2nd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#3178C6]"
+        >
+          <Icon
+            name="simple-icons:typescript"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          TypeScript
+        </p>
+      </div>
+
+      <!-- Next.js (3rd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-black dark:text-white"
+        >
+          <Icon name="simple-icons:nextdotjs" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Next.js
+        </p>
+      </div>
+
+      <!-- Tailwind (4th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#06B6D4]"
+        >
+          <Icon
+            name="simple-icons:tailwindcss"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Tailwind CSS
+        </p>
+      </div>
+
+      <!-- HTML5/CSS3 Combined (5th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 relative"
+        >
+          <Icon
+            name="simple-icons:html5"
+            class="w-7 h-7 sm:w-10 sm:h-10 text-[#E34F26] absolute -left-1"
+          />
+          <Icon
+            name="simple-icons:css3"
+            class="w-7 h-7 sm:w-10 sm:h-10 text-[#1572B6] absolute -right-1"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          HTML5 / CSS3
+        </p>
+      </div>
+
+      <!-- JavaScript (6th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#F7DF1E]"
+        >
+          <Icon
+            name="simple-icons:javascript"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          JavaScript (ES6+)
+        </p>
+      </div>
+
+      <!-- Vite (7th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#646CFF]"
+        >
+          <Icon name="simple-icons:vite" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Vite
+        </p>
+      </div>
+
+      <!-- Astro.js (8th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#FF5D01] dark:text-[#FF5D01]"
+        >
+          <Icon name="simple-icons:astro" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Astro.js
+        </p>
+      </div>
+
+      <!-- Figma (9th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#F24E1E]"
+        >
+          <Icon name="simple-icons:figma" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Figma
+        </p>
+      </div>
+
+      <!-- WordPress (10th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#21759B] dark:text-[#21759B]"
+        >
+          <Icon name="simple-icons:wordpress" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          WordPress
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Backend Development Section -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <h3 class="text-xl font-semibold dark:text-neutral-300">
+        Backend Development
+      </h3>
+    </div>
+    <!-- Section Divider -->
+    <div class="w-full h-px bg-neutral-200 dark:bg-neutral-700 mt-2 mb-6"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <!-- Node.js + Express.js Combined (Most Popular) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 relative"
+        >
+          <Icon
+            name="simple-icons:nodedotjs"
+            class="w-7 h-7 sm:w-10 sm:h-10 text-[#339933] absolute -left-2"
+          />
+          <Icon
+            name="simple-icons:express"
+            class="w-7 h-7 sm:w-10 sm:h-10 text-[#000000] dark:text-[#FFFFFF] absolute -right-2"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Node.js / Express
+        </p>
+      </div>
+
+      <!-- Python (2nd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#3776AB] dark:text-[#3776AB]"
+        >
+          <Icon name="simple-icons:python" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Python
+        </p>
+      </div>
+
+      <!-- BunJs (3rd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-black dark:text-white"
+        >
+          <Icon name="simple-icons:bun" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Bun.js
+        </p>
+      </div>
+
+      <!-- Postman (4th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#FF6C37]"
+        >
+          <Icon name="simple-icons:postman" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Postman
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Database Section -->
+  <div class="mb-8">
+    <div class="flex items-center mb-4">
+      <h3 class="text-xl font-semibold dark:text-neutral-300">Databases</h3>
+    </div>
+    <!-- Section Divider -->
+    <div class="w-full h-px bg-neutral-200 dark:bg-neutral-700 mt-2 mb-6"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <!-- PostgreSQL (Most Popular) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#4169E1]"
+        >
+          <Icon
+            name="simple-icons:postgresql"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          PostgreSQL
+        </p>
+      </div>
+
+      <!-- MySQL (2nd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#4479A1]"
+        >
+          <Icon name="simple-icons:mysql" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          MySQL
+        </p>
+      </div>
+
+      <!-- MongoDB (3rd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#47A248]"
+        >
+          <Icon name="simple-icons:mongodb" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          MongoDB
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Integration Section -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-4">
+      <h3 class="text-xl font-semibold dark:text-neutral-300">
+        AI Integration
+      </h3>
+    </div>
+    <!-- Section Divider -->
+    <div class="w-full h-px bg-neutral-200 dark:bg-neutral-700 mt-2 mb-6"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <!-- OpenAI API (Most Popular) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#10A37F] dark:text-[#10A37F]"
+        >
+          <Icon name="simple-icons:openai" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          OpenAI API
+        </p>
+      </div>
+
+      <!-- Gemini AI (2nd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#5F5CFF] dark:text-[#A18CFF]"
+        >
+          <Icon
+            name="simple-icons:googlegemini"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Gemini API
+        </p>
+      </div>
+
+      <!-- Ollama (4th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-green-600 dark:text-green-500"
+        >
+          <Icon name="simple-icons:ollama" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Ollama
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DevOps & Deployment Section -->
+  <div class="mb-8">
+    <div class="flex items-center mb-4">
+      <h3 class="text-xl font-semibold dark:text-neutral-300">
+        DevOps & Deployment
+      </h3>
+    </div>
+    <!-- Section Divider -->
+    <div class="w-full h-px bg-neutral-200 dark:bg-neutral-700 mt-2 mb-6"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+      <!-- Git -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2"
+        >
+          <Icon
+            name="simple-icons:git"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-[#F05032] dark:text-[#F05032]"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Git
+        </p>
+      </div>
+
+      <!-- GitHub -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2"
+        >
+          <Icon
+            name="simple-icons:github"
+            class="w-8 h-8 sm:w-12 sm:h-12 text-[#181717] dark:text-[#f0f6fc]"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          GitHub
+        </p>
+      </div>
+
+      <!-- Docker (2nd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#2496ED]"
+        >
+          <Icon name="simple-icons:docker" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Docker
+        </p>
+      </div>
+
+      <!-- CI/CD (3rd) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#2088FF]"
+        >
+          <Icon
+            name="simple-icons:githubactions"
+            class="w-8 h-8 sm:w-12 sm:h-12"
+          />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          CI/CD Pipelines
+        </p>
+      </div>
+
+      <!-- Vercel (4th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-black dark:text-white"
+        >
+          <Icon name="simple-icons:vercel" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          Vercel
+        </p>
+      </div>
+
+      <!-- AWS (5th) -->
+      <div
+        class="flex flex-col items-center transform transition-transform duration-300 hover:scale-110"
+      >
+        <div
+          class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-2 text-[#FF9900]"
+        >
+          <Icon name="simple-icons:amazonaws" class="w-8 h-8 sm:w-12 sm:h-12" />
+        </div>
+        <p
+          class="text-xs sm:text-sm text-center text-gray-700 dark:text-neutral-300"
+        >
+          AWS
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Optional: Add more animation effects if desired */
+  .hover\:scale-110:hover {
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+  }
+</style>

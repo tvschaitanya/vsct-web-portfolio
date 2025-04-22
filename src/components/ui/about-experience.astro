@@ -1,0 +1,66 @@
+---
+const { logo, dates, role, company, description } = Astro.props;
+
+// Define some modern background color classes
+const bgColors = [
+  "bg-rose-500",
+  "bg-pink-500",
+  "bg-fuchsia-500",
+  "bg-purple-500",
+  "bg-violet-500",
+  "bg-indigo-500",
+  "bg-blue-500",
+  "bg-cyan-500",
+  "bg-teal-500",
+  "bg-emerald-500",
+  "bg-green-500",
+  "bg-lime-500",
+  "bg-yellow-500",
+  "bg-amber-500",
+  "bg-orange-500",
+  "bg-red-500",
+];
+
+// Randomly pick a background color (based on company name hash to keep it consistent)
+function getRandomColor(company) {
+  const index =
+    company.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+    bgColors.length;
+  return bgColors[index];
+}
+
+const hasLogo = !!logo;
+const fallbackBg = getRandomColor(company);
+---
+
+<div class="relative flex flex-col justify-start pl-12">
+  <div
+    class={`absolute top-0 left-0 z-40 flex items-center justify-center -translate-x-1/2 rounded-full border w-14 h-14 border-neutral-300 dark:border-neutral-700 ${
+      hasLogo ? "bg-white dark:bg-neutral-950" : fallbackBg
+    }`}
+  >
+    {
+      hasLogo ? (
+        <img src={logo} alt={company} class="w-8 h-8" />
+      ) : (
+        <span class="text-sm font-semibold text-white">
+          {company.charAt(0).toUpperCase()}
+        </span>
+      )
+    }
+  </div>
+
+  <p
+    class="text-xs uppercase text-neutral-400 dark:text-neutral-500 tracking-widest"
+  >
+    {dates}
+  </p>
+  <h3 class="my-1 text-lg font-bold dark:text-neutral-100">{role}</h3>
+  <p class="mb-1 text-sm font-medium dark:text-neutral-300">{company}</p>
+
+  <ul
+    class="mt-2 list-disc pl-6 space-y-1 text-sm font-light text-neutral-600 dark:text-neutral-400"
+  >
+    {description.map((point) => <li>{point}</li>)}
+  </ul>
+</div>

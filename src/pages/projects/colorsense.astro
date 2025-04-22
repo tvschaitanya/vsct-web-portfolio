@@ -1,0 +1,582 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import PageHeading from "../../components/ui/page-heading.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<MainLayout title="ColorSense - AI Color Visualization Tool">
+  <div class="max-w-4xl mx-auto my-12 sm:my-16 px-4 sm:px-6 lg:px-8">
+    <!-- Project Header -->
+    <div class="text-center mb-14">
+      <PageHeading title='Color<span class="text-blue-500">Sense</span>' />
+
+      <p
+        class="text-base md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+      >
+        ColorSense is an AI-powered tool that helps you describe, visualize, and
+        get personalized color suggestions for any purpose or setting.
+      </p>
+
+      <!-- Project Tags -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium"
+        >
+          <Icon name="mdi:google" class="w-4 h-4 mr-1.5" />
+          <span>Powered by Gemini AI</span>
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a
+          href="https://github.com/tvschaitanya/colorsense"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center bg-gray-800 dark:bg-gray-700 text-white dark:text-gray-100 rounded-lg px-6 py-3 text-base font-semibold shadow-md hover:scale-105 hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:github" class="w-5 h-5 mr-2" />
+          <span>GitHub Repo</span>
+        </a>
+
+        <a
+          href="https://colorsense.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center bg-blue-600 hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-6 py-3 text-base font-semibold shadow-md hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:play" class="w-5 h-5 mr-2" />
+          <span>Try the App</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Metrics -->
+    <div class="grid grid-cols-3 gap-5 mb-12 hidden">
+      <!-- Hide these by default, but keeping structure for consistency with KDM page -->
+    </div>
+
+    <!-- Featured Image -->
+    <div
+      class="mb-12 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+    >
+      <img
+        src="/assets/images/projects/colorsense-1.png"
+        alt="ColorSense Dashboard"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <!-- Second Screenshot -->
+    <div
+      class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 mb-16"
+    >
+      <img
+        src="/assets/images/projects/colorsense-2.png"
+        alt="ColorSense Color Picker Interface"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <!-- Problem & Solution -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div
+        class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:alert-circle" class="w-6 h-6 text-red-500 mr-2" />
+          The Problem
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Hard to visualize abstract color descriptions like "warm taupe"</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Time-consuming to look up specific color codes</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Many AI-generated color names don't exist in standard libraries</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Communication barriers between designers and clients</span>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:lightbulb-on" class="w-6 h-6 text-blue-500 mr-2" />
+          My Solution
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Built AI-powered color visualization with accurate hex codes</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Created a clean, responsive UI with smooth animations</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Added group processing and smart categorization</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Implemented AI suggestion engine for contextual color advice</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- My Approach -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        How It Works
+      </h2>
+
+      <div class="space-y-8">
+        <!-- Describe Colors Flow -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mb-4"
+        >
+          Mode 1: Describe Colors
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:pencil" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Type color descriptions
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:palette" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              See visual swatches instantly
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:content-copy" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Copy hex codes for your designs
+            </p>
+          </div>
+        </div>
+
+        <!-- Get Suggestions Flow -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mt-8 mb-4"
+        >
+          Mode 2: Get Color Suggestions
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:chat-question" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Ask for color suggestions
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:lightbulb-on" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Get AI-powered recommendations
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:palette-swatch" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Visualize the perfect palette
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Key Features
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+        {
+          [
+            {
+              icon: "mdi:palette",
+              title: "Color Visualization",
+              desc: "Instant visual feedback",
+            },
+            {
+              icon: "mdi:code-array",
+              title: "Hex Code Generation",
+              desc: "Ready for implementation",
+            },
+            {
+              icon: "mdi:format-list-bulleted",
+              title: "Smart Categorization",
+              desc: "Organize by themes",
+            },
+            {
+              icon: "mdi:text-box",
+              title: "Color Descriptions",
+              desc: "Natural language input",
+            },
+            {
+              icon: "mdi:lightbulb-on-outline",
+              title: "AI Suggestions",
+              desc: "Intelligent recommendations",
+            },
+            {
+              icon: "mdi:responsive",
+              title: "Mobile Responsive",
+              desc: "Works on all devices",
+            },
+          ].map((feature) => (
+            <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-200 dark:border-gray-700">
+              <div class="w-12 h-12 flex items-center justify-center mb-3 text-blue-500 dark:text-blue-400">
+                <Icon name={feature.icon} class="w-8 h-8" />
+              </div>
+              <p class="text-base font-bold text-center text-gray-800 dark:text-gray-200 mb-1">
+                {feature.title}
+              </p>
+              <p class="text-sm text-center text-gray-600 dark:text-gray-400">
+                {feature.desc}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="mb-16 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Built With Modern Tech
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon
+              name="simple-icons:nextdotjs"
+              class="w-8 h-8 text-black dark:text-white"
+            />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            Next.js 15
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon name="simple-icons:react" class="w-8 h-8 text-[#61DAFB]" />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            React 19
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon
+              name="simple-icons:typescript"
+              class="w-8 h-8 text-[#3178C6]"
+            />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            TypeScript
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon
+              name="simple-icons:tailwindcss"
+              class="w-8 h-8 text-[#06B6D4]"
+            />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            Tailwind CSS
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon name="simple-icons:framer" class="w-8 h-8 text-[#0055FF]" />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            Framer Motion
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon name="simple-icons:google" class="w-8 h-8 text-[#4285F4]" />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            Google AI Studio
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact / Benefits & Outcomes -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Impact
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:message-text" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Better Communication
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Bridges the gap between designers and clients with visual clarity
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:clock-fast" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Time Savings
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Instantly visualize colors without manual research or guesswork
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:brush" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Creative Exploration
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Use natural language to discover and explore color palettes
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Learnings / Takeaways-->
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+        Key Takeaways
+      </h2>
+
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >AI bridges gaps</span
+            > between language and visual perception, making abstract concepts concrete
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Smooth animations</span
+            > and responsive design significantly enhance user experience
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Personal pain points</span
+            > often lead to tools that solve widespread problems
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Modern frameworks</span
+            > and AI APIs enable rapid development of powerful applications
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mb-8">
+      <a
+        href="https://colorsense.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-8 py-4 text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+      >
+        <Icon name="mdi:rocket-launch" class="w-6 h-6 mr-2" />
+        <span>Try ColorSense Now</span>
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-gradient {
+      background: linear-gradient(90deg, #60a5fa 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+</style>

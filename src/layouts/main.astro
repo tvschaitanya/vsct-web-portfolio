@@ -1,0 +1,72 @@
+---
+import Footer from "../components/ui/footer.astro";
+import Header from "../components/ui/header.astro";
+import SquareLines from "../components/ui/square-lines.astro";
+
+// Ensure title is passed as a prop
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Dark Mode Setup -->
+    <script is:inline>
+      if (typeof Storage !== "undefined") {
+        if (
+          localStorage.getItem("dark_mode") === null ||
+          localStorage.getItem("dark_mode") == "true"
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+    </script>
+
+    <style>
+      .prose img {
+        border-radius: 20px;
+      }
+
+      /* Mobile Overflow Fix */
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      /* Horizontal Scrolling Fix */
+      body {
+        position: relative;
+      }
+
+      /* Background Overflow Fix */
+      [style*="z-index:-1"] {
+        width: 100vw !important;
+        left: 0;
+        right: 0;
+      }
+    </style>
+
+    <!-- Favicon and External Stylesheet -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <script src="../assets/css/main.css"></script>
+    <Fragment set:html={import.meta.env.HEADER_INJECT} />
+  </head>
+
+  <body class="antialiased bg-white dark:bg-neutral-950 overflow-x-hidden">
+    <SquareLines />
+    <Header />
+    <slot />
+    <Footer />
+
+    <!-- External JS -->
+    <script src="../assets/js/main.js"></script>
+    <Fragment set:html={import.meta.env.FOOTER_INJECT} />
+  </body>
+</html>

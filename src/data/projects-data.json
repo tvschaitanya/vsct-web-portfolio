@@ -1,0 +1,44 @@
+[
+  {
+    "name": "ColorSense",
+    "description": "AI-powered tool that converts text color descriptions into hex codes using Next.js and Google AI.",
+    "image": "/assets/images/projects/colorsense-1.png",
+    "url": "/projects/colorsense",
+    "tags": ["AI Integration", "Color Systems", "Next.js", "Google AI", "Interactive UI"]
+  },
+  {
+    "name": "KDM Engineers Website",
+    "description": "Corporate website redesign that boosted mobile traffic by 70% and job applications by 45%.",
+    "image": "/assets/images/projects/kdm-after.png",
+    "url": "/projects/kdm",
+    "tags": ["Responsive Design", "UI/UX Optimization", "Corporate Website", "Performance Boost", "SEO", "Web Redesign"]
+  },
+  {
+    "name": "Epic Questers",
+    "description": "Mobile app design to help users discover local recreational activities, featuring Figma prototypes.",
+    "image": "/assets/images/projects/epic-questers.png",
+    "url": "https://www.figma.com/design/9SuZn91nBolIgs7v5IFVc1/Epic-Questers---Read-Only?node-id=0-1&t=hH5J2w723lloeiyd-1",
+    "tags": ["Mobile UX Design", "Figma", "User Research", "Prototyping", "Location-Based Services", "Social Discovery"]
+  },
+  {
+    "name": "ToDo App",
+    "description": "Full-stack ToDo app with MERN stack, featuring user authentication, task categorization, and dark mode.",
+    "image": "https://raw.githubusercontent.com/tvschaitanya/Minimalist-Todo-App/main/Screenshot%20-%20Login%20Page.jpeg",
+    "url": "https://github.com/tvschaitanya/Minimalist-Todo-App",
+    "tags": ["Full-Stack Development", "MERN Stack", "Authentication", "State Management", "Dark Mode", "Clean Architecture"]
+  },
+  {
+    "name": "Vishnu Wellness",
+    "description": "Health platform offering appointment scheduling, resource library, and optimized performance (95+ PageSpeed).",
+    "image": "/assets/images/projects/vishnuwellness.png",
+    "url": "https://vishnuwellness.in/",
+    "tags": ["Wellness Platform", "Accessibility", "Performance Optimization", "UI/UX Design", "Web Application", "Responsive Design"]
+  },
+  {
+    "name": "MLRIT MUN",
+    "description": "Event website with registration portal and scheduling features for a Model United Nations conference.",
+    "image": "/assets/images/projects/mlrit-mun.jpeg",
+    "url": "https://tvschaitanya.github.io/mlritmun.com/",
+    "tags": ["Event Website", "Vanilla JavaScript", "Education", "Responsive Layout", "Student Engagement"]
+  }
+]

@@ -22,12 +22,12 @@ const isExternal = url.startsWith("http");
       <span class="block w-full">
         <img
           src={image}
-          class="w-full h-auto rounded-lg aspect-[16/9] object-cover"
+          class="w-full h-auto rounded-lg aspect-[16/9] object-cover shadow-sm"
         />
       </span>
       <span class="block w-full px-1 mt-5 mb-1 sm:mt-3">
         <span
-          class="flex items-center mb-0 text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 project-name"
+          class="flex items-center mb-1 text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 project-name"
         >
           <span>{name}</span>
           <svg
@@ -67,7 +67,7 @@ const isExternal = url.startsWith("http");
           </svg>
         </span>
         <span
-          class="text-sm text-neutral-600 dark:text-neutral-400 block truncate project-description"
+          class="text-sm text-neutral-600 dark:text-neutral-400 block project-description"
         >
           {description}
         </span>

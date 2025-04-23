@@ -29,7 +29,7 @@ html.dark #darkToggle:hover .horizon {
 }
 
 html.dark {
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 .horizon .setting {
@@ -42,31 +42,77 @@ html.dark {
 
 @keyframes setting {
   0% {
-    transform: translate3d(0, 10px, 0)
+    transform: translate3d(0, 10px, 0);
   }
 
   40% {
-    transform: translate3d(0, -2px, 0)
+    transform: translate3d(0, -2px, 0);
   }
 
   to {
-    transform: translate3d(0, 30px, 0)
+    transform: translate3d(0, 30px, 0);
   }
 }
 
 @keyframes rising {
   0% {
     opacity: 0;
-    transform: translate3d(0, 30px, 0)
+    transform: translate3d(0, 30px, 0);
   }
 
   40% {
     opacity: 1;
-    transform: translate3d(0, -2px, 0)
+    transform: translate3d(0, -2px, 0);
   }
 
   to {
     opacity: 1;
-    transform: translate3d(0, 10, 0)
+    transform: translate3d(0, 10px, 0);
   }
+}
+
+/* Project Card Improvements */
+.project-wrapper {
+  height: 100%;
+  display: flex;
+}
+
+.project-wrapper a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Improved description readability */
+.project-description {
+  line-height: 1.6;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  letter-spacing: 0.01em;
+}
+
+.project-wrapper:hover .project-description {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
+
+/* Improved tag readability */
+.project-wrapper a .tag-wrapper {
+  margin-top: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+.project-wrapper a .tag-wrapper span {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.6rem;
+  margin-bottom: 0.25rem;
 }

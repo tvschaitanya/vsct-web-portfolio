@@ -34,7 +34,7 @@ import PageHeading from "../ui/page-heading.astro";
           </div>
           <div class="tech-item">
             <div class="tech-icon">
-              <Icon name="simple-icons:nextdotjs" class="text-white" />
+              <Icon name="simple-icons:nextdotjs" class="text-current" />
             </div>
             <span class="tech-label">Next.js</span>
           </div>
@@ -84,7 +84,7 @@ import PageHeading from "../ui/page-heading.astro";
           </div>
           <div class="tech-item">
             <div class="tech-icon">
-              <Icon name="simple-icons:express" class="text-white" />
+              <Icon name="simple-icons:express" class="text-current" />
             </div>
             <span class="tech-label">Express</span>
           </div>
@@ -102,7 +102,7 @@ import PageHeading from "../ui/page-heading.astro";
           </div>
           <div class="tech-item">
             <div class="tech-icon">
-              <Icon name="simple-icons:bun" class="text-white" />
+              <Icon name="simple-icons:bun" class="text-current" />
             </div>
             <span class="tech-label">Bun</span>
           </div>
@@ -136,7 +136,7 @@ import PageHeading from "../ui/page-heading.astro";
           </div>
           <div class="tech-item">
             <div class="tech-icon">
-              <Icon name="simple-icons:github" class="text-white" />
+              <Icon name="simple-icons:github" class="text-current" />
             </div>
             <span class="tech-label">GitHub</span>
           </div>
@@ -154,7 +154,7 @@ import PageHeading from "../ui/page-heading.astro";
           </div>
           <div class="tech-item">
             <div class="tech-icon">
-              <Icon name="simple-icons:vercel" class="text-white" />
+              <Icon name="simple-icons:vercel" class="text-current" />
             </div>
             <span class="tech-label">Vercel</span>
           </div>
@@ -312,19 +312,40 @@ import PageHeading from "../ui/page-heading.astro";
   }
 
   .skill-card {
-    background-color: #1e293b;
+    position: relative;
+    background-color: transparent;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    transition:
-      transform 0.3s ease,
-      border-color 0.3s ease;
+    transition: all 0.3s ease;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  .skill-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px dashed rgba(148, 163, 184, 0.5);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 1;
   }
 
   .skill-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .skill-card:hover::before {
+    border-color: rgba(96, 165, 250, 0.7);
+  }
+
+  /* Light mode styles */
+  :global(.light) .skill-card::before {
+    border-color: rgba(71, 85, 105, 0.8);
+    border-width: 1.5px;
+  }
+
+  :global(.light) .skill-card:hover::before {
+    border-color: rgba(59, 130, 246, 0.8);
   }
 
   .card-content {
@@ -332,6 +353,20 @@ import PageHeading from "../ui/page-heading.astro";
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 5;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover .card-content {
+    background-color: rgba(30, 41, 59, 0.02);
+  }
+
+  :global(.light) .skill-card:hover .card-content {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
   }
 
   .card-icon {
@@ -339,20 +374,43 @@ import PageHeading from "../ui/page-heading.astro";
     height: 40px;
     margin-bottom: 1rem;
     position: relative;
-    color: #60a5fa;
+    transition: transform 0.3s ease;
+  }
+
+  .skill-card:hover .card-icon {
+    transform: scale(1.1);
   }
 
   .icon-primary {
     width: 100%;
     height: 100%;
-    color: currentColor;
+    color: #60a5fa;
+    transition: all 0.3s ease;
+  }
+
+  :global(.light) .icon-primary {
+    color: #3b82f6;
+  }
+
+  .skill-card:hover .icon-primary {
+    color: #60a5fa;
+    filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.8));
+  }
+
+  :global(.light) .skill-card:hover .icon-primary {
+    color: #2563eb;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
   }
 
   .skill-card h3 {
-    color: white;
+    color: #f8fafc;
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+
+  :global(.light) .skill-card h3 {
+    color: #1e293b;
   }
 
   .skill-card p {
@@ -360,6 +418,10 @@ import PageHeading from "../ui/page-heading.astro";
     font-size: 0.875rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;
+  }
+
+  :global(.light) .skill-card p {
+    color: #64748b;
   }
 
   .tech-icons {
@@ -405,6 +467,15 @@ import PageHeading from "../ui/page-heading.astro";
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  :global(.light) .tech-label {
+    color: #64748b;
+  }
+
+  /* Fix for dark icons in light mode */
+  :global(.light) .tech-icon svg.text-current {
+    color: #334155;
   }
 
   @media (max-width: 640px) {

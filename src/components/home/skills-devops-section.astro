@@ -1,0 +1,374 @@
+---
+import { Icon } from "astro-icon/components";
+import PageHeading from "../ui/page-heading.astro";
+---
+
+<section
+  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+>
+  <div class="tech-grid">
+    <!-- Cloud Platforms Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:amazonaws" class="icon-primary" />
+        </div>
+        <h3>Cloud Platforms</h3>
+        <p>
+          Building and managing scalable cloud infrastructure for modern
+          applications
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+            </div>
+            <span class="tech-label">AWS</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:googlecloud" class="text-[#4285F4]" />
+            </div>
+            <span class="tech-label">GCP</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:microsoftazure" class="text-[#0078D4]" />
+            </div>
+            <span class="tech-label">Azure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infrastructure as Code Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:terraform" class="icon-primary" />
+        </div>
+        <h3>Infrastructure as Code</h3>
+        <p>Automating infrastructure provisioning and management</p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:terraform" class="text-[#7B42BC]" />
+            </div>
+            <span class="tech-label">Terraform</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:ansible" class="text-[#EE0000]" />
+            </div>
+            <span class="tech-label">Ansible</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+            </div>
+            <span class="tech-label">CloudFormation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CI/CD Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:jenkins" class="icon-primary" />
+        </div>
+        <h3>CI/CD</h3>
+        <p>
+          Continuous integration and delivery pipelines for automated testing
+          and deployment
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:jenkins" class="text-[#D24939]" />
+            </div>
+            <span class="tech-label">Jenkins</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:githubactions" class="text-[#2088FF]" />
+            </div>
+            <span class="tech-label">GitHub Actions</span>
+          </div>
+
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:jfrog" class="text-[#41BF47]" />
+            </div>
+            <span class="tech-label">JFrog</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+            </div>
+            <span class="tech-label">CodePipeline</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Containers & Orchestration Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:kubernetes" class="icon-primary" />
+        </div>
+        <h3>Containers & Orchestration</h3>
+        <p>
+          Building, deploying, and managing containerized applications at scale
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:docker" class="text-[#2496ED]" />
+            </div>
+            <span class="tech-label">Docker</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:kubernetes" class="text-[#326CE5]" />
+            </div>
+            <span class="tech-label">Kubernetes</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+            </div>
+            <span class="tech-label">EKS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monitoring & Observability Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:datadog" class="icon-primary" />
+        </div>
+        <h3>Monitoring & Observability</h3>
+        <p>
+          Tracking system performance, troubleshooting, and ensuring reliability
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:datadog" class="text-[#632CA6]" />
+            </div>
+            <span class="tech-label">Datadog</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:splunk" class="text-[#FF4500]" />
+            </div>
+            <span class="tech-label">Splunk</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:dynatrace" class="text-[#1496FF]" />
+            </div>
+            <span class="tech-label">Dynatrace</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:prometheus" class="text-[#E6522C]" />
+            </div>
+            <span class="tech-label">Prometheus</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:grafana" class="text-[#F46800]" />
+            </div>
+            <span class="tech-label">Grafana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Incident Management Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:google" class="icon-primary" />
+        </div>
+        <h3>Incident Management</h3>
+        <p>
+          Managing and resolving service disruptions with systematic approaches
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:google" class="text-[#293E40]" />
+            </div>
+            <span class="tech-label">ServiceNow</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:pagerduty" class="text-[#06AC38]" />
+            </div>
+            <span class="tech-label">PagerDuty</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripting & Automation Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:python" class="icon-primary" />
+        </div>
+        <h3>Scripting & Automation</h3>
+        <p>Automating routine tasks and infrastructure management</p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:python" class="text-[#3776AB]" />
+            </div>
+            <span class="tech-label">Python</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:gnubash" class="text-white" />
+            </div>
+            <span class="tech-label">Shell</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:yaml" class="text-[#CB171E]" />
+            </div>
+            <span class="tech-label">YAML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .skill-card {
+    background-color: #1e293b;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #60a5fa;
+  }
+
+  .icon-primary {
+    width: 100%;
+    height: 100%;
+    color: currentColor;
+  }
+
+  .skill-card h3 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-card p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    min-width: 3.5rem;
+  }
+
+  .tech-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tech-icon:hover {
+    transform: translateY(-2px);
+  }
+
+  .tech-label {
+    font-size: 0.625rem;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 3.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 640px) {
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+  }
+</style>

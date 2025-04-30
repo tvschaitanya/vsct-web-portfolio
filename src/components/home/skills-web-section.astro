@@ -1,0 +1,419 @@
+---
+import { Icon } from "astro-icon/components";
+import PageHeading from "../ui/page-heading.astro";
+---
+
+<section
+  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+>
+  <div class="tech-grid">
+    <!-- Frontend Development Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:react" class="icon-primary" />
+        </div>
+        <h3>Frontend Development</h3>
+        <p>
+          Building responsive, interactive user interfaces with modern web
+          technologies
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:react" class="text-[#61DAFB]" />
+            </div>
+            <span class="tech-label">React</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:typescript" class="text-[#3178C6]" />
+            </div>
+            <span class="tech-label">TypeScript</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:nextdotjs" class="text-white" />
+            </div>
+            <span class="tech-label">Next.js</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:tailwindcss" class="text-[#06B6D4]" />
+            </div>
+            <span class="tech-label">Tailwind</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:javascript" class="text-[#F7DF1E]" />
+            </div>
+            <span class="tech-label">JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:vite" class="text-[#646CFF]" />
+            </div>
+            <span class="tech-label">Vite</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:astro" class="text-[#FF5D01]" />
+            </div>
+            <span class="tech-label">Astro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend Development Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:nodedotjs" class="icon-primary" />
+        </div>
+        <h3>Backend Development</h3>
+        <p>Building robust server-side applications and APIs</p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:nodedotjs" class="text-[#339933]" />
+            </div>
+            <span class="tech-label">Node.js</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:express" class="text-white" />
+            </div>
+            <span class="tech-label">Express</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:python" class="text-[#3776AB]" />
+            </div>
+            <span class="tech-label">Python</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:clerk" class="text-[#FF6C37]" />
+            </div>
+            <span class="tech-label">Clerk</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:bun" class="text-white" />
+            </div>
+            <span class="tech-label">Bun</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:postman" class="text-[#FF6C37]" />
+            </div>
+            <span class="tech-label">Postman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deployment Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:githubactions" class="icon-primary" />
+        </div>
+        <h3>Deployment</h3>
+        <p>
+          Managing development workflow, continuous integration, and deployment
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:git" class="text-[#F05032]" />
+            </div>
+            <span class="tech-label">Git</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:github" class="text-white" />
+            </div>
+            <span class="tech-label">GitHub</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:docker" class="text-[#2496ED]" />
+            </div>
+            <span class="tech-label">Docker</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:netlify" class="text-[#2088FF]" />
+            </div>
+            <span class="tech-label">Netlify</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:vercel" class="text-white" />
+            </div>
+            <span class="tech-label">Vercel</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+            </div>
+            <span class="tech-label">AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Database Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:postgresql" class="icon-primary" />
+        </div>
+        <h3>Databases</h3>
+        <p>
+          Storing and retrieving data efficiently with relational and NoSQL
+          databases
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:postgresql" class="text-[#4169E1]" />
+            </div>
+            <span class="tech-label">PostgreSQL</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:mysql" class="text-[#4479A1]" />
+            </div>
+            <span class="tech-label">MySQL</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:mongodb" class="text-[#47A248]" />
+            </div>
+            <span class="tech-label">MongoDB</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:supabase" class="text-[#47A248]" />
+            </div>
+            <span class="tech-label">Supabase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CMS Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:wordpress" class="icon-primary" />
+        </div>
+        <h3>CMS</h3>
+        <p>Building and managing content-driven websites and applications</p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:wordpress" class="text-[#21759B]" />
+            </div>
+            <span class="tech-label">WordPress</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:strapi" class="text-[#0678BE]" />
+            </div>
+            <span class="tech-label">Strapi</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:contentful" class="text-[#2478CC]" />
+            </div>
+            <span class="tech-label">Contentful</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Integration Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:openai" class="icon-primary" />
+        </div>
+        <h3>AI Integration</h3>
+        <p>
+          Incorporating artificial intelligence capabilities into applications
+        </p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:openai" class="text-[#10A37F]" />
+            </div>
+            <span class="tech-label">OpenAI</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:googlegemini" class="text-[#5F5CFF]" />
+            </div>
+            <span class="tech-label">Gemini</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:ollama" class="text-green-600" />
+            </div>
+            <span class="tech-label">Ollama</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wireframing Card -->
+    <div class="skill-card">
+      <div class="card-content">
+        <div class="card-icon">
+          <Icon name="simple-icons:figma" class="icon-primary" />
+        </div>
+        <h3>Wireframing & Prototyping</h3>
+        <p>Creating intuitive UI designs and interactive prototypes</p>
+
+        <div class="tech-icons">
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:figma" class="text-[#F24E1E]" />
+            </div>
+            <span class="tech-label">Figma</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <Icon name="simple-icons:adobexd" class="text-[#FF61F6]" />
+            </div>
+            <span class="tech-label">Adobe XD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .skill-card {
+    background-color: #1e293b;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #60a5fa;
+  }
+
+  .icon-primary {
+    width: 100%;
+    height: 100%;
+    color: currentColor;
+  }
+
+  .skill-card h3 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-card p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: auto;
+  }
+
+  .tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    min-width: 3.5rem;
+  }
+
+  .tech-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tech-icon:hover {
+    transform: translateY(-2px);
+  }
+
+  .tech-label {
+    font-size: 0.625rem;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 3.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 640px) {
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card-content {
+      padding: 1.25rem;
+    }
+  }
+</style>

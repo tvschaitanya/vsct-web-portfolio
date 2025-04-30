@@ -6,12 +6,12 @@ import PageHeading from "../ui/page-heading.astro";
 ---
 
 <section
-  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+  class="relative z-20 max-w-2xl mx-auto my-6 sm:my-12 px-6 sm:px-7 lg:px-0"
 >
   <PageHeading title='My <span class="text-blue-500">Projects</span>' />
 
   <div
-    class="z-50 grid items-stretch w-full grid-cols-1 my-6 sm:my-8 gap-5 sm:gap-7 sm:grid-cols-2"
+    class="z-50 grid items-stretch w-full grid-cols-1 my-5 sm:my-8 gap-4 sm:gap-7 sm:grid-cols-2"
   >
     {
       projects.slice(0, 4).map((project) => {
@@ -28,7 +28,7 @@ import PageHeading from "../ui/page-heading.astro";
     }
   </div>
 
-  <div class="flex items-center justify-center w-full py-5">
+  <div class="flex items-center justify-center w-full py-4 sm:py-5">
     <Button text="View All My Projects" link="/projects" />
   </div>
 </section>

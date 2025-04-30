@@ -6,388 +6,440 @@ import PageHeading from "../ui/page-heading.astro";
 <section
   class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
 >
-  <div class="tech-grid">
-    <!-- Cloud Platforms Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:amazonaws" class="icon-primary" />
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:amazonaws"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
         </div>
-        <h3>Cloud Platforms</h3>
-        <p>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          Cloud Platforms
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
           Building and managing scalable cloud infrastructure for modern
           applications
         </p>
 
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:amazonaws"
+                class="w-full h-full text-[#FF9900]"
+              />
             </div>
-            <span class="tech-label">AWS</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >AWS</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:googlecloud" class="text-[#4285F4]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:googlecloud"
+                class="w-full h-full text-[#4285F4]"
+              />
             </div>
-            <span class="tech-label">GCP</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >GCP</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:microsoftazure" class="text-[#0078D4]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:microsoftazure"
+                class="w-full h-full text-[#0078D4]"
+              />
             </div>
-            <span class="tech-label">Azure</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Infrastructure as Code Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:terraform" class="icon-primary" />
-        </div>
-        <h3>Infrastructure as Code</h3>
-        <p>Automating infrastructure provisioning and management</p>
-
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:terraform" class="text-[#7B42BC]" />
-            </div>
-            <span class="tech-label">Terraform</span>
-          </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:ansible" class="text-[#EE0000]" />
-            </div>
-            <span class="tech-label">Ansible</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Azure</span
+            >
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CI/CD Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:githubactions" class="icon-primary" />
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:terraform"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
         </div>
-        <h3>CI/CD</h3>
-        <p>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          Infrastructure as Code
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+          Automating infrastructure provisioning and management
+        </p>
+
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:terraform"
+                class="w-full h-full text-[#7B42BC]"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Terraform</span
+            >
+          </div>
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:ansible"
+                class="w-full h-full text-[#EE0000]"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Ansible</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:githubactions"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
+        </div>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          CI/CD
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
           Continuous integration and delivery pipelines for automated testing
           and deployment
         </p>
 
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:jenkins" class="text-[#D24939]" />
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:jenkins"
+                class="w-full h-full text-[#D24939]"
+              />
             </div>
-            <span class="tech-label">Jenkins</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Jenkins</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:github" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:github"
+                class="w-full h-full text-slate-700 dark:text-slate-300"
+              />
             </div>
-            <span class="tech-label">Actions</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Actions</span
+            >
           </div>
 
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:jfrog" class="text-[#41BF47]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:jfrog"
+                class="w-full h-full text-[#41BF47]"
+              />
             </div>
-            <span class="tech-label">Artifactory</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Artifactory</span
+            >
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Containers & Orchestration Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:kubernetes" class="icon-primary" />
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:kubernetes"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
         </div>
-        <h3>Containers & Orchestration</h3>
-        <p>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          Containers & Orchestration
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
           Building, deploying, and managing containerized applications at scale
         </p>
 
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:docker" class="text-[#2496ED]" />
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:docker"
+                class="w-full h-full text-[#2496ED]"
+              />
             </div>
-            <span class="tech-label">Docker</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Docker</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:kubernetes" class="text-[#326CE5]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:kubernetes"
+                class="w-full h-full text-[#326CE5]"
+              />
             </div>
-            <span class="tech-label">Kubernetes</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Kubernetes</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:amazonaws" class="text-[#FF9900]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:amazonaws"
+                class="w-full h-full text-[#FF9900]"
+              />
             </div>
-            <span class="tech-label">EKS</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >EKS</span
+            >
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Monitoring & Observability Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:datadog" class="icon-primary" />
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:datadog"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
         </div>
-        <h3>Monitoring & Observability</h3>
-        <p>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          Monitoring & Observability
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
           Tracking system performance, troubleshooting, and ensuring reliability
         </p>
 
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:datadog" class="text-[#632CA6]" />
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:datadog"
+                class="w-full h-full text-[#9d59f0]"
+              />
             </div>
-            <span class="tech-label">Datadog</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Datadog</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:splunk" class="text-[#FF4500]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:splunk"
+                class="w-full h-full text-[#FF4500]"
+              />
             </div>
-            <span class="tech-label">Splunk</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Splunk</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:dynatrace" class="text-[#1496FF]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:dynatrace"
+                class="w-full h-full text-[#1496FF]"
+              />
             </div>
-            <span class="tech-label">Dynatrace</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Dynatrace</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:grafana" class="text-[#F46800]" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:grafana"
+                class="w-full h-full text-[#F46800]"
+              />
             </div>
-            <span class="tech-label">Grafana</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Grafana</span
+            >
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Scripting & Automation Card -->
-    <div class="skill-card">
-      <div class="card-content">
-        <div class="card-icon">
-          <Icon name="simple-icons:python" class="icon-primary" />
+    <div
+      class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
+    >
+      <div
+        class="absolute inset-0 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg transition-colors duration-300 group-hover:border-blue-500 z-1"
+      >
+      </div>
+      <div
+        class="p-6 flex flex-col h-full relative z-5 bg-transparent rounded-lg transition-all duration-300 group-hover:bg-slate-50/2 dark:group-hover:bg-slate-800/50"
+      >
+        <div
+          class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
+        >
+          <Icon
+            name="simple-icons:python"
+            class="w-full h-full text-blue-500 dark:text-blue-400"
+          />
         </div>
-        <h3>Scripting & Automation</h3>
-        <p>Automating routine tasks and infrastructure management</p>
+        <h3
+          class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
+        >
+          Scripting & Automation
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+          Automating routine tasks and infrastructure management
+        </p>
 
-        <div class="tech-icons">
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:python" class="text-[#3776AB]" />
+        <div class="mt-auto flex flex-wrap gap-2">
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:python"
+                class="w-full h-full text-[#3776AB]"
+              />
             </div>
-            <span class="tech-label">Python</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Python</span
+            >
           </div>
-          <div class="tech-item">
-            <div class="tech-icon">
-              <Icon name="simple-icons:gnubash" class="text-current" />
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:gnubash"
+                class="w-full h-full text-slate-700 dark:text-slate-300"
+              />
             </div>
-            <span class="tech-label">Shell</span>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Shell</span
+            >
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<style>
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.25rem;
-    margin-top: 2rem;
-  }
-
-  .skill-card {
-    position: relative;
-    background-color: transparent;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    height: 100%;
-    overflow: visible;
-  }
-
-  .skill-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 1px dashed rgba(148, 163, 184, 0.5);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    z-index: 1;
-  }
-
-  .skill-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .skill-card:hover::before {
-    border-color: rgba(96, 165, 250, 0.7);
-  }
-
-  /* Light mode styles */
-  :global(.light) .skill-card::before {
-    border-color: rgba(71, 85, 105, 0.8);
-    border-width: 1.5px;
-  }
-
-  :global(.light) .skill-card:hover::before {
-    border-color: rgba(59, 130, 246, 0.8);
-  }
-
-  .card-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    z-index: 5;
-    background-color: transparent;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-
-  .skill-card:hover .card-content {
-    background-color: rgba(30, 41, 59, 0.02);
-  }
-
-  :global(.light) .skill-card:hover .card-content {
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
-  }
-
-  .card-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1rem;
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-
-  .skill-card:hover .card-icon {
-    transform: scale(1.1);
-  }
-
-  .icon-primary {
-    width: 100%;
-    height: 100%;
-    color: #60a5fa;
-    transition: all 0.3s ease;
-  }
-
-  :global(.light) .icon-primary {
-    color: #3b82f6;
-  }
-
-  .skill-card:hover .icon-primary {
-    color: #60a5fa;
-    filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.8));
-  }
-
-  :global(.light) .skill-card:hover .icon-primary {
-    color: #2563eb;
-    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
-  }
-
-  .skill-card h3 {
-    color: #f8fafc;
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  :global(.light) .skill-card h3 {
-    color: #1e293b;
-  }
-
-  .skill-card p {
-    color: #94a3b8;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin-bottom: 1.25rem;
-  }
-
-  :global(.light) .skill-card p {
-    color: #64748b;
-  }
-
-  .tech-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: auto;
-  }
-
-  .tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    min-width: 3.5rem;
-  }
-
-  .tech-icon {
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.25rem;
-    transition: transform 0.2s ease;
-  }
-
-  .tech-icon svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .tech-icon:hover {
-    transform: translateY(-2px);
-  }
-
-  .tech-label {
-    font-size: 0.625rem;
-    color: #94a3b8;
-    text-align: center;
-    line-height: 1.2;
-    max-width: 3.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  :global(.light) .tech-label {
-    color: #64748b;
-  }
-
-  /* Fix for dark icons in light mode */
-  :global(.light) .tech-icon svg.text-current {
-    color: #334155;
-  }
-
-  @media (max-width: 640px) {
-    .tech-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .card-content {
-      padding: 1.25rem;
-    }
-  }
-</style>

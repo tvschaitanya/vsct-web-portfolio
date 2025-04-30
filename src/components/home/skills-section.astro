@@ -6,82 +6,45 @@ import PageHeading from "../ui/page-heading.astro";
 import Button from "../ui/button.astro";
 ---
 
-<section>
-  <div class="toggle-container">
-    <button
-      id="web-toggle"
-      class="inline-flex w-auto px-4 py-2 text-sm font-semibold duration-300 ease-in-out transform border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white toggle-btn active"
-      aria-pressed="true"
-    >
-      <Icon name="simple-icons:react" class="toggle-icon mr-2" />
-      <span>Web Development</span>
-    </button>
-    <button
-      id="devops-toggle"
-      class="inline-flex w-auto px-4 py-2 text-sm font-semibold duration-300 ease-in-out transform border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white toggle-btn"
-      aria-pressed="false"
-    >
-      <Icon name="simple-icons:kubernetes" class="toggle-icon mr-2" />
-      <span>DevOps</span>
-    </button>
-  </div>
-  <h1
-    class="skills-title text-3xl sm:text-4xl font-bold text-center mt-6 mb-10"
+<section
+  class="relative z-20 max-w-2xl mx-auto my-8 sm:my-12 px-4 sm:px-7 lg:px-0"
+>
+  <div
+    class="flex flex-col sm:flex-row items-center sm:items-start justify-between mb-8"
   >
-    Web Development <span class="text-blue-500">Skills</span>
-  </h1>
-  <div id="web-skills" class="skill-section active">
+    <h1 class="skills-title text-3xl sm:text-4xl font-bold mb-4 sm:mb-0">
+      Web Dev <span class="text-blue-500">Skills</span>
+    </h1>
+
+    <div class="flex gap-2">
+      <button
+        id="web-toggle"
+        class="flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 active"
+        aria-pressed="true"
+      >
+        <Icon name="simple-icons:react" class="w-5 h-5 mr-2" />
+        <span>Web Dev</span>
+      </button>
+      <button
+        id="devops-toggle"
+        class="flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        aria-pressed="false"
+      >
+        <Icon name="simple-icons:kubernetes" class="w-5 h-5 mr-2" />
+        <span>DevOps</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="web-skills" class="block animate-fadeIn">
     <WebSkillsSection />
   </div>
-  <div id="devops-skills" class="skill-section">
+  <div id="devops-skills" class="hidden">
     <DevOpsSkillsSection />
   </div>
 </section>
+
 <style>
-  section {
-    padding-top: 2rem; /* Add space above the section */
-  }
-  .toggle-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-  }
-  .toggle-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  /* Light mode active styles */
-  .toggle-btn.active {
-    background-color: white !important;
-    color: #0f172a !important;
-    border-color: #3b82f6 !important;
-    border-width: 2px !important;
-    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
-  }
-  /* Class for dark mode - applied via JS */
-  html.dark .toggle-btn.active {
-    background-color: #1e293b !important;
-    color: white !important;
-    border-color: #3b82f6 !important;
-    border-width: 2px !important;
-    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
-  }
-  .toggle-btn.active .toggle-icon {
-    color: #3b82f6;
-  }
-  .toggle-icon {
-    width: 20px;
-    height: 20px;
-  }
-  .skill-section {
-    display: none;
-  }
-  .skill-section.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
-  }
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -90,43 +53,76 @@ import Button from "../ui/button.astro";
       opacity: 1;
     }
   }
-  @media (max-width: 640px) {
-    .toggle-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    .toggle-btn {
-      width: 80%;
-    }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease;
+  }
+
+  /* Light mode active styles */
+  #web-toggle.active,
+  #devops-toggle.active {
+    @apply bg-white text-slate-900 border-blue-500 border-2 shadow-sm;
+  }
+
+  #web-toggle.active .w-5,
+  #devops-toggle.active .w-5 {
+    @apply text-blue-500;
+  }
+
+  /* Dark mode styles */
+  html.dark #web-toggle,
+  html.dark #devops-toggle {
+    @apply bg-white text-neutral-900 border-white;
+  }
+
+  html.dark #web-toggle:hover,
+  html.dark #devops-toggle:hover {
+    @apply bg-black text-white border-neutral-300;
+  }
+
+  html.dark #web-toggle:focus,
+  html.dark #devops-toggle:focus {
+    @apply ring-white;
+  }
+
+  html.dark #web-toggle.active,
+  html.dark #devops-toggle.active {
+    @apply bg-slate-800 text-white border-blue-500 border-2 shadow-sm;
   }
 </style>
+
 <script>
   // Get toggle buttons and skill sections
   const webToggle = document.getElementById("web-toggle");
   const devopsToggle = document.getElementById("devops-toggle");
   const webSkills = document.getElementById("web-skills");
   const devopsSkills = document.getElementById("devops-skills");
+  const skillsTitle = document.querySelector(".skills-title");
+
   // Add click event listeners
   webToggle.addEventListener("click", () => {
     webToggle.classList.add("active");
     devopsToggle.classList.remove("active");
-    webSkills.classList.add("active");
-    devopsSkills.classList.remove("active");
+    webSkills.classList.remove("hidden");
+    webSkills.classList.add("block", "animate-fadeIn");
+    devopsSkills.classList.add("hidden");
+    devopsSkills.classList.remove("block", "animate-fadeIn");
     webToggle.setAttribute("aria-pressed", "true");
     devopsToggle.setAttribute("aria-pressed", "false");
     // Update page title to reflect selected skills
-    document.querySelector(".skills-title").innerHTML =
-      'Web Development <span class="text-blue-500">Skills</span>';
+    skillsTitle.innerHTML = 'Web Dev <span class="text-blue-500">Skills</span>';
   });
+
   devopsToggle.addEventListener("click", () => {
     devopsToggle.classList.add("active");
     webToggle.classList.remove("active");
-    devopsSkills.classList.add("active");
-    webSkills.classList.remove("active");
+    devopsSkills.classList.remove("hidden");
+    devopsSkills.classList.add("block", "animate-fadeIn");
+    webSkills.classList.add("hidden");
+    webSkills.classList.remove("block", "animate-fadeIn");
     devopsToggle.setAttribute("aria-pressed", "true");
     webToggle.setAttribute("aria-pressed", "false");
     // Update page title to reflect selected skills
-    document.querySelector(".skills-title").innerHTML =
-      'DevOps <span class="text-blue-500">Skills</span>';
+    skillsTitle.innerHTML = 'DevOps <span class="text-blue-500">Skills</span>';
   });
 </script>

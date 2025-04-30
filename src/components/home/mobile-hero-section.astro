@@ -1,5 +1,6 @@
 ---
 import Button from "../ui/button.astro";
+import { Image } from "astro:assets"; // Import Astro's native Image component
 ---
 
 <style>
@@ -114,6 +115,15 @@ import Button from "../ui/button.astro";
   .dark .glow-lifecycle {
     animation: dark-glow-lifecycle 4s ease-in-out forwards;
   }
+
+  /* Add styling for the profile image container */
+  .profile-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+  }
 </style>
 
 <!-- Mobile and Tablet Hero Section -->
@@ -133,15 +143,23 @@ import Button from "../ui/button.astro";
           >
           </div>
 
-          <!-- Inner content container -->
+          <!-- Inner content container with optimized image -->
           <div
             class="absolute inset-2 rounded-full overflow-hidden border-4 border-white dark:border-neutral-900 bg-white dark:bg-neutral-900 shadow-lg"
           >
-            <img
-              src="/assets/images/me.jpeg"
-              alt="Chaitanya's photo"
-              class="w-full h-full object-cover rounded-full"
-            />
+            <div class="profile-image-wrapper">
+              <!-- Use Astro's Image component for optimized loading -->
+              <Image
+                src="/assets/images/me.jpeg"
+                alt="Chaitanya's photo"
+                width={500}
+                height={500}
+                loading="eager"
+                format="webp"
+                quality={80}
+                class="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -165,8 +183,8 @@ import Button from "../ui/button.astro";
       </div>
     </div>
 
-    <!-- Text content (left-aligned) -->
-    <div class="w-full max-w-md text-left">
+    <!-- Text content (center-aligned) -->
+    <div class="w-full max-w-md text-center">
       <!-- Greeting, Name, and Title highlighted -->
       <div class="mb-5 sm:mb-6">
         <div
@@ -182,16 +200,17 @@ import Button from "../ui/button.astro";
         <div
           class="text-lg sm:text-xl font-semibold text-neutral-700 dark:text-neutral-300"
         >
-          Web Developer & UI/UX Specialist
+          A Software Engineer
         </div>
       </div>
 
       <!-- Main description -->
       <p
-        class="mb-5 text-sm sm:text-base leading-relaxed text-neutral-600 dark:text-white"
+        class="mb-5 text-sm sm:text-base leading-relaxed text-neutral-600 dark:text-white mx-auto max-w-xs"
       >
-        With a strong background in web development, I specialize in creating
-        user-centric digital experiences that solve real-world problems.
+        I specialize in Web Development and DevOps, delivering end-to-end
+        solutions by combining modern frontend development with automated cloud
+        infrastructure.
       </p>
 
       <!-- Skills list -->
@@ -201,16 +220,15 @@ import Button from "../ui/button.astro";
         Key strengths I bring to the team:
       </p>
       <ul
-        class="py-1 sm:py-2 mb-5 space-y-1 sm:space-y-[3px] text-xs sm:text-sm list-disc list-inside text-neutral-500 dark:text-neutral-400"
+        class="py-1 sm:py-2 mb-5 space-y-1 sm:space-y-[3px] text-xs sm:text-sm list-none text-neutral-500 dark:text-neutral-400"
       >
-        <li>Building modern UI's with React & Tailwind</li>
-        <li>Designing intuitive UX with accessibility in mind</li>
-        <li>Optimizing performance & SEO for better visibility</li>
-        <li>Full-stack development with REST APIs & Node.js</li>
+        <li>Building modern, responsive UIs</li>
+        <li>Designing accessible, user-friendly interfaces</li>
+        <li>Automating infrastructure & CI/CD pipelines</li>
       </ul>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-row gap-3 sm:gap-4 mt-4">
+      <div class="flex flex-row justify-center gap-3 sm:gap-4 mt-4">
         <div class="w-auto">
           <Button text="View All My Projects" link="#projects" />
         </div>

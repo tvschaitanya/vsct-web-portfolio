@@ -3,81 +3,85 @@ import WebSkillsSection from "./skills-web-section.astro";
 import DevOpsSkillsSection from "./skills-devops-section.astro";
 import { Icon } from "astro-icon/components";
 import PageHeading from "../ui/page-heading.astro";
+import Button from "../ui/button.astro";
 ---
 
 <section>
   <div class="toggle-container">
-    <button id="web-toggle" class="toggle-btn active" aria-pressed="true">
-      <Icon name="simple-icons:react" class="toggle-icon" />
+    <button
+      id="web-toggle"
+      class="inline-flex w-auto px-4 py-2 text-sm font-semibold duration-300 ease-in-out transform border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white toggle-btn active"
+      aria-pressed="true"
+    >
+      <Icon name="simple-icons:react" class="toggle-icon mr-2" />
       <span>Web Development</span>
     </button>
-    <button id="devops-toggle" class="toggle-btn" aria-pressed="false">
-      <Icon name="simple-icons:kubernetes" class="toggle-icon" />
+    <button
+      id="devops-toggle"
+      class="inline-flex w-auto px-4 py-2 text-sm font-semibold duration-300 ease-in-out transform border rounded-full bg-neutral-900 dark:bg-white dark:text-neutral-900 text-neutral-100 hover:border-neutral-700 border-neutral-900 dark:hover:border-neutral-300 hover:bg-white dark:hover:bg-black dark:hover:text-white hover:text-neutral-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white toggle-btn"
+      aria-pressed="false"
+    >
+      <Icon name="simple-icons:kubernetes" class="toggle-icon mr-2" />
       <span>DevOps</span>
     </button>
   </div>
-
   <h1
     class="skills-title text-3xl sm:text-4xl font-bold text-center mt-6 mb-10"
   >
     Web Development <span class="text-blue-500">Skills</span>
   </h1>
-
   <div id="web-skills" class="skill-section active">
     <WebSkillsSection />
   </div>
-
   <div id="devops-skills" class="skill-section">
     <DevOpsSkillsSection />
   </div>
 </section>
-
 <style>
   section {
     padding-top: 2rem; /* Add space above the section */
   }
-
   .toggle-container {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
     gap: 1rem;
   }
-
   .toggle-btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #1e293b;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #94a3b8;
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
   }
-
+  /* Light mode active styles */
   .toggle-btn.active {
-    background-color: rgba(59, 130, 246, 0.1);
-    border-color: rgba(59, 130, 246, 0.5);
-    color: #60a5fa;
+    background-color: white !important;
+    color: #0f172a !important;
+    border-color: #3b82f6 !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
   }
-
+  /* Class for dark mode - applied via JS */
+  html.dark .toggle-btn.active {
+    background-color: #1e293b !important;
+    color: white !important;
+    border-color: #3b82f6 !important;
+    border-width: 2px !important;
+    box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+  }
+  .toggle-btn.active .toggle-icon {
+    color: #3b82f6;
+  }
   .toggle-icon {
     width: 20px;
     height: 20px;
   }
-
   .skill-section {
     display: none;
   }
-
   .skill-section.active {
     display: block;
     animation: fadeIn 0.5s ease;
   }
-
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -86,26 +90,22 @@ import PageHeading from "../ui/page-heading.astro";
       opacity: 1;
     }
   }
-
   @media (max-width: 640px) {
     .toggle-container {
       flex-direction: column;
       align-items: center;
     }
-
     .toggle-btn {
       width: 80%;
     }
   }
 </style>
-
 <script>
   // Get toggle buttons and skill sections
   const webToggle = document.getElementById("web-toggle");
   const devopsToggle = document.getElementById("devops-toggle");
   const webSkills = document.getElementById("web-skills");
   const devopsSkills = document.getElementById("devops-skills");
-
   // Add click event listeners
   webToggle.addEventListener("click", () => {
     webToggle.classList.add("active");
@@ -114,12 +114,10 @@ import PageHeading from "../ui/page-heading.astro";
     devopsSkills.classList.remove("active");
     webToggle.setAttribute("aria-pressed", "true");
     devopsToggle.setAttribute("aria-pressed", "false");
-
     // Update page title to reflect selected skills
     document.querySelector(".skills-title").innerHTML =
       'Web Development <span class="text-blue-500">Skills</span>';
   });
-
   devopsToggle.addEventListener("click", () => {
     devopsToggle.classList.add("active");
     webToggle.classList.remove("active");
@@ -127,7 +125,6 @@ import PageHeading from "../ui/page-heading.astro";
     webSkills.classList.remove("active");
     devopsToggle.setAttribute("aria-pressed", "true");
     webToggle.setAttribute("aria-pressed", "false");
-
     // Update page title to reflect selected skills
     document.querySelector(".skills-title").innerHTML =
       'DevOps <span class="text-blue-500">Skills</span>';

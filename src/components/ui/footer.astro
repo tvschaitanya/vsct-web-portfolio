@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import Logo from "./logo.astro";
+const year = new Date().getFullYear();
 ---
 
 <section
@@ -15,7 +16,8 @@ import Logo from "./logo.astro";
         >|</span
       >
       <div class="sm:hidden w-px h-4 bg-neutral-300 dark:bg-neutral-600"></div>
-      <p>© {new Date().getFullYear()}</p>
+      <p>© {year}</p>
     </div>
+    <p class="text-neutral-500 dark:text-neutral-400">Built with AstroJs ❤️</p>
   </div>
 </section>

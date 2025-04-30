@@ -8,34 +8,19 @@ const isExternal = url.startsWith("http");
     href={url}
     target={isExternal ? "_blank" : "_self"}
     rel={isExternal ? "noopener noreferrer" : undefined}
-    class="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl"
+    class="project-card"
   >
-    <span
-      class="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"
-    ></span>
-    <span
-      class="absolute inset-0 z-10 block w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 group-hover:translate-x-1 group-hover:translate-y-1"
-    ></span>
-    <span
-      class="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1"
-    >
-      <span class="block w-full">
-        <img
-          src={image}
-          class="w-full h-auto rounded-lg aspect-[16/9] object-cover shadow-sm"
-        />
-      </span>
-      <span class="block w-full px-1 mt-5 mb-1 sm:mt-3">
-        <span
-          class="flex items-center mb-1 text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 project-name"
-        >
+    <div class="card-content">
+      <div class="image-container">
+        <img src={image} class="project-image" alt={name} />
+      </div>
+      <div class="project-details">
+        <div class="project-name">
           <span>{name}</span>
           <svg
-            class="group-hover:translate-x-0 group-hover:translate-y-0 -rotate-45 translate-y-1 -translate-x-1 w-2.5 h-2.5 stroke-current ml-1 transition-all ease-in-out duration-200 transform"
+            class="arrow-icon"
             viewBox="0 0 13 15"
-            version="1.1"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
           >
             <g
               stroke="none"
@@ -52,11 +37,11 @@ const isExternal = url.startsWith("http");
               >
                 <g>
                   <polyline
-                    class="transition-all duration-200 ease-out opacity-0 delay-0 group-hover:opacity-100"
+                    class="arrow-head"
                     points="5.33333333 0 10.8333333 5.5 5.33333333 11"
                   ></polyline>
                   <line
-                    class="transition-all duration-200 ease-out transform -translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:ml-0"
+                    class="arrow-body"
                     x1="10.8333333"
                     y1="5.5"
                     x2="0.833333333"
@@ -65,24 +50,215 @@ const isExternal = url.startsWith("http");
               </g>
             </g>
           </svg>
-        </span>
-        <span
-          class="text-sm text-neutral-600 dark:text-neutral-400 block project-description"
-        >
+        </div>
+        <div class="project-description">
           {description}
-        </span>
+        </div>
         {
           tags && tags.length > 0 && (
-            <div class="flex flex-wrap gap-1.5 mt-2">
+            <div class="project-tags">
               {tags.map((tag) => (
-                <span class="px-2 py-0.5 text-xs rounded-full border border-neutral-300 dark:border-neutral-600 text-neutral-700 dark:text-neutral-300 transition-all duration-200 ease-in-out hover:bg-neutral-800 dark:hover:bg-neutral-200 hover:text-neutral-100 dark:hover:text-neutral-800 hover:border-transparent cursor-pointer transform hover:-translate-y-0.5 hover:shadow-sm">
-                  {tag}
-                </span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           )
         }
-      </span>
-    </span>
+      </div>
+    </div>
   </a>
 </div>
+
+<style>
+  .project-wrapper {
+    height: 100%;
+  }
+
+  .project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px dashed rgba(148, 163, 184, 0.5);
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .project-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .project-card:hover::before {
+    border-color: rgba(96, 165, 250, 0.7);
+  }
+
+  /* Light mode styles */
+  :global(.light) .project-card::before {
+    border-color: rgba(71, 85, 105, 0.8);
+    border-width: 1.5px;
+  }
+
+  :global(.light) .project-card:hover::before {
+    border-color: rgba(59, 130, 246, 0.8);
+  }
+
+  @media (max-width: 640px) {
+    .project-card {
+      padding: 0.75rem;
+    }
+  }
+
+  .card-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .card-content {
+    transform: translateY(-2px);
+  }
+
+  .image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .image-container {
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.15);
+  }
+
+  :global(.light) .project-card:hover .image-container {
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover .project-image {
+    transform: scale(1.03);
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.25rem;
+  }
+
+  .project-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.125rem;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: #0f172a;
+    transition: color 0.3s ease;
+  }
+
+  :global(.dark) .project-name {
+    color: #f8fafc;
+  }
+
+  .project-card:hover .project-name {
+    color: #3b82f6;
+  }
+
+  .arrow-icon {
+    width: 0.625rem;
+    height: 0.625rem;
+    margin-left: 0.25rem;
+    transform: rotate(-45deg) translate(-2px, 2px);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .project-card:hover .arrow-icon {
+    transform: rotate(-45deg) translate(0px, 0px);
+  }
+
+  .arrow-head {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .project-card:hover .arrow-head {
+    opacity: 1;
+  }
+
+  .arrow-body {
+    transform: translateX(-4px);
+    opacity: 0;
+    transition: all 0.2s ease-out;
+  }
+
+  .project-card:hover .arrow-body {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .project-description {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  :global(.dark) .project-description {
+    color: #94a3b8;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.375rem;
+  }
+
+  .tag {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: 9999px;
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+  }
+
+  :global(.dark) .tag {
+    border-color: #4b5563;
+    color: #d1d5db;
+  }
+
+  .tag:hover {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  :global(.light) .tag:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+</style>

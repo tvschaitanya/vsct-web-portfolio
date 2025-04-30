@@ -1,4 +1,4 @@
-# My Portfolio Website
+# VSCT Portfolio Website
 
 Welcome to my personal portfolio website repository. This site showcases my skills, projects, and professional experience.
 
@@ -6,9 +6,10 @@ Welcome to my personal portfolio website repository. This site showcases my skil
 
 - **[Astro](https://astro.build/)**: A modern static site builder that delivers lightning-fast performance
 - **[Tailwind CSS](https://tailwindcss.com/)**: For responsive and utility-first styling
-- **[React](https://reactjs.org/)**: For interactive components like the image comparer
+- **[React](https://reactjs.org/)**: For interactive components like the image comparer (using react-compare-slider)
 - **[TypeScript](https://www.typescriptlang.org/)**: For type-safe code
-- **[Bun](https://bun.sh/)**: JavaScript runtime and package manager
+- **[Bun](https://bun.sh/)**: Fast JavaScript runtime and package manager
+- **[Biome](https://biomejs.dev/)**: A fast formatter and linter
 
 ## Project Structure
 
@@ -27,28 +28,5 @@ Welcome to my personal portfolio website repository. This site showcases my skil
 - Skills sections highlighting web development and DevOps capabilities
 - About section with professional experience
 - Contact information
-- Image comparison component for before/after visuals
-
-## Getting Started
-
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-3. Start the development server:
-   ```bash
-   bun run dev
-   ```
-4. Build for production:
-   ```bash
-   bun run build
-   ```
-
-## License
-
-This project is licensed under the terms included in the LICENSE file.
-
-## Contact
-
-Feel free to reach out through the contact section on my website for collaboration or inquiries.
+- Interactive image comparison component (using react-compare-slider)
+- Icon integration with Astro Icon (using MDI and Simple Icons)

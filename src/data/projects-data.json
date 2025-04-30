@@ -1,6 +1,6 @@
 [
   {
-    "name": "E-Commerce DevOps Implementation",
+    "name": "E-Commerce DevOps",
     "description": "Architected scalable cloud infrastructure on AWS EKS with Terraform and Kubernetes. Automated deployments via GitHub Actions/Argo CD, accelerating release cycles by 30% and ensuring 99.9% uptime during peak loads.",
     "image": "/assets/images/projects/devops-ecom-1.png",
     "url": "/projects/opentele",
@@ -14,7 +14,7 @@
     "tags": ["Full Stack", "Next.js", "AI Integration", "Google AI", "Interactive UI"]
   },
   {
-    "name": "KDM Engineers Website Redesign",
+    "name": "Redesign of KDM Engineers Site",
     "description": "Modernized KDM Engineers' website with responsive UI/UX, boosting mobile engagement by 40% and improving page load speed by 50%, leading to a 15% increase in contact form submissions.",
     "image": "/assets/images/projects/kdm-after.png",
     "url": "/projects/kdm",

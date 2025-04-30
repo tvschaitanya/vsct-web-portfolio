@@ -1,0 +1,240 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import PageHeading from "../../components/ui/page-heading.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<MainLayout title="My DevOps Journey with OpenTelemetry">
+  <div class="max-w-4xl mx-auto my-12 sm:my-16 px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <PageHeading
+        title='OpenTelemetry <span class="text-blue-500">Astronomy Shop</span>'
+      />
+      <p
+        class="text-base md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+      >
+        I've been working with the OpenTelemetry Astronomy Shop Demo to gain
+        hands-on experience in DevOps. It’s helped me understand how real-world
+        applications are structured, monitored, and managed.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a
+          href="https://github.com/open-telemetry/opentelemetry-demo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 rounded-md bg-gray-800 dark:bg-gray-700 text-white dark:text-gray-100 text-sm font-medium shadow-md hover:scale-105 hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:github" class="w-4 h-4 mr-2" />
+          <span>See the Code</span>
+        </a>
+        <a
+          href="https://opentelemetry.io/docs/demo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 text-white text-sm font-medium shadow-md hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:book-open-variant" class="w-4 h-4 mr-2" />
+          <span>Read the Docs</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Featured Image -->
+    <div
+      class="mb-12 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+    >
+      <img
+        src="/assets/images/projects/devops-ecom-1.png"
+        alt="ColorSense Dashboard"
+        class="w-full h-auto"
+      />
+    </div>
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        My Project Steps: A Simple Overview
+      </h2>
+      <p class="text-base text-gray-700 dark:text-gray-300 mb-6">
+        Here's a simplified look at how I set up the OpenTelemetry Astronomy
+        Shop Demo to learn about DevOps:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-blue-600 dark:text-blue-400 flex items-center"
+          >
+            <Icon name="mdi:aws" class="w-6 h-6 mr-2" />
+            Cloud Setup (AWS)
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>Used Terraform to get things running on the cloud (AWS).</li>
+            <li>Made sure all the parts could communicate with each other.</li>
+            <li>Set up a web address for the application.</li>
+          </ul>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-purple-600 dark:text-purple-400 flex items-center"
+          >
+            <Icon name="mdi:docker" class="w-6 h-6 mr-2" />
+            Containers (Docker)
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>Put each piece of the application into its own container.</li>
+            <li>Managed these containers for the app.</li>
+            <li>Tested the app on my computer using these containers.</li>
+          </ul>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-teal-600 dark:text-teal-400 flex items-center"
+          >
+            <Icon name="mdi:kubernetes" class="w-6 h-6 mr-2" />
+            Running on a Cluster (Kubernetes)
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>Used Kubernetes on AWS (EKS) to run the application.</li>
+            <li>
+              Set up how the different parts of the app are started and managed.
+            </li>
+            <li>Made sure the app could store its data.</li>
+          </ul>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-orange-600 dark:text-orange-400 flex items-center"
+          >
+            <Icon name="mdi:terraform" class="w-6 h-6 mr-2" />
+            Setup as Code (Terraform)
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>Wrote down the setup for AWS as code using Terraform.</li>
+            <li>Made sure only one person could make changes at a time.</li>
+            <li>Automated the process of setting up the AWS infrastructure.</li>
+          </ul>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400 flex items-center"
+          >
+            <Icon name="mdi:git" class="w-6 h-6 mr-2" />
+            Keeping Things Synced (GitOps with Argo CD)
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>
+              Used Argo CD to manage how the app gets updated based on the code
+              in Git.
+            </li>
+            <li>Automated the deployment of new versions of the app.</li>
+            <li>Defined how the Kubernetes setup should be in code.</li>
+          </ul>
+        </div>
+        <div
+          class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h3
+            class="text-xl font-semibold mb-4 text-yellow-600 dark:text-yellow-400 flex items-center"
+          >
+            <Icon name="mdi:github" class="w-6 h-6 mr-2" />
+            Automated Deployment
+          </h3>
+          <ul
+            class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2"
+          >
+            <li>Automated building and testing of application code.</li>
+            <li>Automated the deployment process.</li>
+            <li>Automatically deployed code to Kubernetes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+        Key DevOps Concepts
+      </h2>
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <Icon
+            name="mdi:puzzle-outline"
+            class="w-6 h-6 text-green-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Microservices:</span
+            >
+            Managing many small services adds complexity but increases flexibility.
+          </p>
+        </div>
+        <div class="flex items-start">
+          <Icon
+            name="mdi:code-braces"
+            class="w-6 h-6 text-orange-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Infrastructure as Code:</span
+            >
+            Using code for setup ensures consistency and simplifies management.
+          </p>
+        </div>
+        <div class="flex items-start">
+          <Icon
+            name="mdi:anchor"
+            class="w-6 h-6 text-purple-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Container Orchestration:</span
+            >
+            Kubernetes makes it easier to run and scale applications efficiently.
+          </p>
+        </div>
+        <div class="flex items-start">
+          <Icon
+            name="mdi:rocket"
+            class="w-6 h-6 text-blue-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >CI/CD Pipelines:</span
+            >
+            Automation speeds up deployments and reduces potential errors.
+          </p>
+        </div>
+        <div class="flex items-start">
+          <Icon
+            name="mdi:git"
+            class="w-6 h-6 text-teal-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >GitOps:</span
+            >
+            Managing everything through Git ensures reliability and clarity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>

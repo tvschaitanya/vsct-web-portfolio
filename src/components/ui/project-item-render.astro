@@ -12,7 +12,7 @@ const isExternal = url.startsWith("http");
   >
     <div class="card-content">
       <div class="image-container">
-        <img src={image} class="project-image" alt={name} />
+        <img src={image} class="project-image" alt={name} loading="lazy" />
       </div>
       <div class="project-details">
         <div class="project-name">
@@ -52,7 +52,7 @@ const isExternal = url.startsWith("http");
           </svg>
         </div>
         <div class="project-description">
-          {description}
+          <p>{description}</p>
         </div>
         {
           tags && tags.length > 0 && (
@@ -70,17 +70,19 @@ const isExternal = url.startsWith("http");
 
 <style>
   .project-wrapper {
-    height: 100%;
+    /* Ensure the wrapper takes up necessary space */
+    display: flex;
   }
 
   .project-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%; /* Make cards take full width in a flex container */
     border-radius: 0.75rem;
     padding: 0.75rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
+    will-change: transform;
   }
 
   .project-card::before {
@@ -89,7 +91,7 @@ const isExternal = url.startsWith("http");
     inset: 0;
     border: 1px dashed rgba(148, 163, 184, 0.5);
     border-radius: 0.75rem;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease;
     z-index: 1;
   }
 
@@ -113,7 +115,7 @@ const isExternal = url.startsWith("http");
 
   @media (max-width: 640px) {
     .project-card {
-      padding: 0.75rem;
+      padding: 0.5rem; /* Slightly smaller padding for mobile */
     }
   }
 
@@ -123,11 +125,7 @@ const isExternal = url.startsWith("http");
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: all 0.3s ease;
-  }
-
-  .project-card:hover .card-content {
-    transform: translateY(-2px);
+    /* Remove height transition as it can cause layout jumps with content changes */
   }
 
   .image-container {
@@ -136,7 +134,8 @@ const isExternal = url.startsWith("http");
     border-radius: 0.375rem;
     margin-bottom: 0.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    will-change: box-shadow;
   }
 
   .project-card:hover .image-container {
@@ -153,6 +152,7 @@ const isExternal = url.startsWith("http");
     aspect-ratio: 16/9;
     object-fit: cover;
     transition: transform 0.5s ease;
+    will-change: transform;
   }
 
   .project-card:hover .project-image {
@@ -163,6 +163,7 @@ const isExternal = url.startsWith("http");
     display: flex;
     flex-direction: column;
     padding: 0 0.25rem;
+    /* Remove transition on height or flex-grow as it can be problematic */
   }
 
   .project-name {
@@ -173,6 +174,7 @@ const isExternal = url.startsWith("http");
     font-weight: 600;
     color: #0f172a;
     transition: color 0.3s ease;
+    will-change: color;
   }
 
   :global(.dark) .project-name {
@@ -188,7 +190,8 @@ const isExternal = url.startsWith("http");
     height: 0.625rem;
     margin-left: 0.25rem;
     transform: rotate(-45deg) translate(-2px, 2px);
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    will-change: transform;
   }
 
   .project-card:hover .arrow-icon {
@@ -198,6 +201,7 @@ const isExternal = url.startsWith("http");
   .arrow-head {
     opacity: 0;
     transition: opacity 0.2s ease-out;
+    will-change: opacity;
   }
 
   .project-card:hover .arrow-head {
@@ -207,7 +211,10 @@ const isExternal = url.startsWith("http");
   .arrow-body {
     transform: translateX(-4px);
     opacity: 0;
-    transition: all 0.2s ease-out;
+    transition:
+      transform 0.2s ease-out,
+      opacity 0.2s ease-out;
+    will-change: transform, opacity;
   }
 
   .project-card:hover .arrow-body {
@@ -220,6 +227,7 @@ const isExternal = url.startsWith("http");
     color: #64748b;
     margin-bottom: 0.5rem;
     line-height: 1.4;
+    /* Consider a max-height and overflow: hidden with a toggle for very long descriptions */
   }
 
   :global(.dark) .project-description {
@@ -240,8 +248,14 @@ const isExternal = url.startsWith("http");
     background-color: transparent;
     border: 1px solid #d1d5db;
     color: #4b5563;
-    transition: all 0.2s ease-in-out;
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out,
+      border-color 0.2s ease-in-out,
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
     transform: translateY(0);
+    will-change: transform, background-color, color, border-color, box-shadow;
   }
 
   :global(.dark) .tag {
@@ -260,5 +274,23 @@ const isExternal = url.startsWith("http");
   :global(.light) .tag:hover {
     background-color: #3b82f6;
     color: white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .card-content,
+    .project-image,
+    .arrow-icon,
+    .arrow-head,
+    .arrow-body,
+    .tag {
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+      box-shadow: none !important;
+      color: inherit !important;
+      background-color: inherit !important;
+      border-color: inherit !important;
+    }
   }
 </style>

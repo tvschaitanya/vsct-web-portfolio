@@ -3,31 +3,273 @@ import projects from "../data/projects-data.json";
 import PageHeading from "../components/ui/page-heading.astro";
 import Project from "../components/ui/project-item-render.astro";
 import Layout from "../layouts/main.astro";
+import { Icon } from "astro-icon/components";
+
+// Define our categories
+const categories = ["All", "DevOps", "Full Stack", "UI UX"];
+
+// Get all projects
+const allProjects = projects;
+
+// Define types for project data
+type ProjectTag = string;
+
+interface ProjectData {
+  name: string;
+  description: string;
+  image: string;
+  url: string;
+  tags: ProjectTag[];
+}
+
+// Type assertion for projects
+const typedProjects = allProjects as ProjectData[];
 ---
 
 <Layout title="My Projects">
-  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
-    <PageHeading
-      title='My <span class="text-blue-500">Projects</span>'
-      description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
-    />
+  <section class="relative z-20 max-w-2xl mx-auto my-12 px-6 lg:px-0">
+    <PageHeading title='My <span class="text-blue-500">Projects</span>' />
+
+    <div class="mt-8 flex flex-wrap gap-3 mb-8 justify-start px-1">
+      <button
+        id="all-toggle"
+        class="filter-button active flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        data-category="All"
+        aria-pressed="true"
+      >
+        <Icon name="mdi:view-grid" class="w-5 h-5 mr-2" />
+        <span>All Projects</span>
+      </button>
+
+      <button
+        id="devops-toggle"
+        class="filter-button flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        data-category="DevOps"
+        aria-pressed="false"
+      >
+        <Icon name="simple-icons:kubernetes" class="w-5 h-5 mr-2" />
+        <span>DevOps</span>
+      </button>
+
+      <button
+        id="fullstack-toggle"
+        class="filter-button flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        data-category="Full Stack"
+        aria-pressed="false"
+      >
+        <Icon name="simple-icons:react" class="w-5 h-5 mr-2" />
+        <span>Full Stack</span>
+      </button>
+
+      <button
+        id="uiux-toggle"
+        class="filter-button flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        data-category="UI UX"
+        aria-pressed="false"
+      >
+        <Icon name="simple-icons:figma" class="w-5 h-5 mr-2" />
+        <span>UI/UX</span>
+      </button>
+    </div>
 
     <div
       class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+      id="projects-container"
     >
       {
-        projects.map((project) => {
+        typedProjects.map((project) => {
           return (
-            <Project
-              name={project.name}
-              description={project.description}
-              image={project.image}
-              url={project.url}
-              tags={project.tags}
-            />
+            <div class="project-item" data-tags={JSON.stringify(project.tags)}>
+              <Project
+                name={project.name}
+                description={project.description}
+                image={project.image}
+                url={project.url}
+                tags={project.tags}
+              />
+            </div>
           );
         })
       }
     </div>
+
+    <div id="no-projects" class="text-center py-10 hidden animate-fadeIn">
+      <p class="text-gray-500">No projects found in this category.</p>
+    </div>
   </section>
 </Layout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards; /* Shorter duration and forwards */
+  }
+
+  .project-item {
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      opacity 0.3s ease-out,
+      transform 0.3s ease-out; /* Add transition */
+  }
+
+  .project-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-item.hidden {
+    display: none;
+  }
+
+  /* Light mode active styles */
+  .filter-button.active {
+    @apply bg-white text-slate-900 border-blue-500 border-2 shadow-sm;
+  }
+
+  .filter-button.active .w-5 {
+    @apply text-blue-500;
+  }
+
+  /* Dark mode styles */
+  html.dark .filter-button {
+    @apply bg-neutral-900 text-neutral-50 border border-neutral-900;
+  }
+
+  html.dark .filter-button:hover {
+    @apply border-neutral-500 bg-white text-neutral-900;
+  }
+
+  html.dark .filter-button:focus {
+    @apply ring-neutral-900;
+  }
+
+  html.dark .filter-button.active {
+    @apply bg-slate-800 text-white border-blue-500 border-2 shadow-sm;
+  }
+</style>
+
+<script>
+  // Define types for TypeScript safety
+  type Category = "All" | "DevOps" | "Full Stack" | "UI UX";
+
+  interface CategoryMappings {
+    [key: string]: string[];
+  }
+
+  // Define category mappings
+  const categoryMappings: CategoryMappings = {
+    DevOps: ["DevOps"],
+    "Full Stack": ["Full Stack"],
+    "UI UX": ["UI UX"],
+  };
+
+  // Get all elements with type assertions
+  const filterButtons =
+    document.querySelectorAll<HTMLButtonElement>(".filter-button");
+  const projectItems = document.querySelectorAll<HTMLElement>(".project-item");
+  const noProjectsMessage = document.getElementById(
+    "no-projects"
+  ) as HTMLElement;
+  const projectsContainer = document.getElementById(
+    "projects-container"
+  ) as HTMLElement;
+
+  // Function to filter projects
+  function filterProjects(category: Category): void {
+    let visibleCount = 0;
+
+    // Update button styles
+    filterButtons.forEach((btn) => {
+      if (btn.dataset.category === category) {
+        btn.classList.add("active");
+        btn.setAttribute("aria-pressed", "true");
+      } else {
+        btn.classList.remove("active");
+        btn.setAttribute("aria-pressed", "false");
+      }
+    });
+
+    projectItems.forEach((item) => {
+      const tags = JSON.parse(item.dataset.tags || "[]") as string[];
+      const matchesCategory =
+        category === "All" ||
+        tags.some(
+          (tag) =>
+            categoryMappings[category] &&
+            categoryMappings[category].includes(tag)
+        );
+
+      if (matchesCategory) {
+        item.classList.remove("hidden");
+        setTimeout(() => {
+          item.classList.add("visible");
+        }, 50); // Small delay to ensure hidden class is applied
+        visibleCount++;
+      } else {
+        item.classList.remove("visible");
+        item.classList.add("hidden");
+      }
+    });
+
+    // Show/hide no projects message
+    if (visibleCount === 0) {
+      noProjectsMessage.classList.remove("hidden");
+      noProjectsMessage.classList.add("animate-fadeIn");
+    } else {
+      noProjectsMessage.classList.add("hidden");
+      noProjectsMessage.classList.remove("animate-fadeIn");
+    }
+  }
+
+  // Add click event listeners to filter buttons
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category as Category;
+      if (!category) return;
+
+      // Reset visibility and trigger reflow for smoother animation
+      projectItems.forEach((item) => {
+        item.classList.remove("visible");
+      });
+      // Force a reflow, triggering the transition from the previous state
+      void projectsContainer.offsetWidth;
+
+      filterProjects(category);
+
+      // Update URL with category parameter without page reload
+      const url = new URL(window.location.href);
+      if (category !== "All") {
+        url.searchParams.set("category", category);
+      } else {
+        url.searchParams.delete("category");
+      }
+      window.history.pushState({}, "", url.toString());
+    });
+  });
+
+  // Initialize with URL parameter or 'All' filter
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get("category") as Category | null;
+
+    if (
+      categoryParam &&
+      ["All", "DevOps", "Full Stack", "UI UX"].includes(categoryParam)
+    ) {
+      filterProjects(categoryParam);
+    } else {
+      filterProjects("All");
+    }
+  });
+</script>

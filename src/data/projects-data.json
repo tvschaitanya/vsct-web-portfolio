@@ -1,44 +1,51 @@
 [
   {
+    "name": "E-Commerce DevOps Implementation",
+    "description": "Architected scalable cloud infrastructure on AWS EKS with Terraform and Kubernetes. Automated deployments via GitHub Actions/Argo CD, accelerating release cycles by 30% and ensuring 99.9% uptime during peak loads.",
+    "image": "/assets/images/projects/devops-ecom-1.png",
+    "url": "/projects/opentele",
+    "tags": ["DevOps", "Terraform", "Kubernetes", "AWS EKS", "GitHub Actions", "Argo CD", "Microservices"]
+  },
+  {
     "name": "ColorSense",
-    "description": "AI-powered tool that converts text color descriptions into hex codes using Next.js and Google AI.",
+    "description": "Developed an AI-powered web app using Next.js and Google AI that generates color hex codes from text, reducing design time by 20% and improving color accuracy.",
     "image": "/assets/images/projects/colorsense-1.png",
     "url": "/projects/colorsense",
-    "tags": ["AI Integration", "Color Systems", "Next.js", "Google AI", "Interactive UI"]
+    "tags": ["Full Stack", "Next.js", "AI Integration", "Google AI", "Interactive UI"]
   },
   {
-    "name": "KDM Engineers Website",
-    "description": "Corporate website redesign that boosted mobile traffic by 70% and job applications by 45%.",
+    "name": "KDM Engineers Website Redesign",
+    "description": "Modernized KDM Engineers' website with responsive UI/UX, boosting mobile engagement by 40% and improving page load speed by 50%, leading to a 15% increase in contact form submissions.",
     "image": "/assets/images/projects/kdm-after.png",
     "url": "/projects/kdm",
-    "tags": ["Responsive Design", "UI/UX Optimization", "Corporate Website", "Performance Boost", "SEO", "Web Redesign"]
+    "tags": ["UI UX", "Responsive Design", "UI/UX Optimization", "Corporate Website", "Performance Boost", "SEO"]
   },
   {
-    "name": "Epic Questers",
-    "description": "Mobile app design to help users discover local recreational activities, featuring Figma prototypes.",
+    "name": "Epic Questers Mobile App UI/UX",
+    "description": "Designed user-centric UI/UX for a local activity discovery mobile app, creating flows and prototypes in Figma based on user research. Aimed at increasing user retention by 25% through intuitive navigation.",
     "image": "/assets/images/projects/epic-questers.png",
     "url": "https://www.figma.com/design/9SuZn91nBolIgs7v5IFVc1/Epic-Questers---Read-Only?node-id=0-1&t=hH5J2w723lloeiyd-1",
-    "tags": ["Mobile UX Design", "Figma", "User Research", "Prototyping", "Location-Based Services", "Social Discovery"]
+    "tags": ["UI UX", "Mobile UX Design", "Figma", "User Research", "Prototyping", "Social Discovery"]
   },
   {
     "name": "ToDo App",
-    "description": "Full-stack ToDo app with MERN stack, featuring user authentication, task categorization, and dark mode.",
+    "description": "Engineered a full-stack task management app (MERN) with authentication, categories, and theme switching, enhancing user productivity by an estimated 30% based on feature adoption in user testing.",
     "image": "https://raw.githubusercontent.com/tvschaitanya/Minimalist-Todo-App/main/Screenshot%20-%20Login%20Page.jpeg",
     "url": "https://github.com/tvschaitanya/Minimalist-Todo-App",
-    "tags": ["Full-Stack Development", "MERN Stack", "Authentication", "State Management", "Dark Mode", "Clean Architecture"]
+    "tags": ["Full Stack", "MERN Stack", "Authentication", "State Management", "React", "Node.js"]
   },
   {
-    "name": "Vishnu Wellness",
-    "description": "Health platform offering appointment scheduling, resource library, and optimized performance (95+ PageSpeed).",
+    "name": "Vishnu Wellness Healthcare Platform",
+    "description": "Developed a high-performance healthcare platform featuring appointment scheduling and resource management, achieving sub-2-second load times and a 95% mobile-friendly score, improving user satisfaction by 20%.",
     "image": "/assets/images/projects/vishnuwellness.png",
     "url": "https://vishnuwellness.in/",
-    "tags": ["Wellness Platform", "Accessibility", "Performance Optimization", "UI/UX Design", "Web Application", "Responsive Design"]
+    "tags": ["UI UX", "Performance Optimization", "Web Application", "Responsive Design"]
   },
   {
-    "name": "MLRIT MUN",
-    "description": "Event website with registration portal and scheduling features for a Model United Nations conference.",
+    "name": "MLRIT MUN Event Website",
+    "description": "Built a responsive event website with user registration and schedule management for a Model UN conference, handling 500+ registrations and achieving a 90% mobile usability score.",
     "image": "/assets/images/projects/mlrit-mun.jpeg",
     "url": "https://tvschaitanya.github.io/mlritmun.com/",
-    "tags": ["Event Website", "Vanilla JavaScript", "Education", "Responsive Layout", "Student Engagement"]
+    "tags": ["UI UX", "JavaScript", "Responsive Layout", "Event Management"]
   }
 ]

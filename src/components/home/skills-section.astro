@@ -16,10 +16,11 @@ import Button from "../ui/button.astro";
       Web Dev <span class="text-blue-500">Skills</span>
     </h1>
 
-    <div class="flex gap-2">
+    <div class="mt-4 sm:mt-0 flex gap-3">
       <button
         id="web-toggle"
-        class="flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 active"
+        class="filter-button active flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 whitespace-nowrap"
+        data-category="Web"
         aria-pressed="true"
       >
         <Icon name="simple-icons:react" class="w-5 h-5 mr-2" />
@@ -27,7 +28,8 @@ import Button from "../ui/button.astro";
       </button>
       <button
         id="devops-toggle"
-        class="flex items-center px-4 py-2 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+        class="filter-button flex items-center px-4 py-2.5 text-sm font-semibold rounded-full transition-all duration-300 bg-neutral-900 text-neutral-50 border border-neutral-900 hover:border-neutral-500 hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900 whitespace-nowrap"
+        data-category="DevOps"
         aria-pressed="false"
       >
         <Icon name="simple-icons:kubernetes" class="w-5 h-5 mr-2" />
@@ -48,45 +50,41 @@ import Button from "../ui/button.astro";
   @keyframes fadeIn {
     from {
       opacity: 0;
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
   .animate-fadeIn {
-    animation: fadeIn 0.5s ease;
+    animation: fadeIn 0.3s ease-out forwards;
   }
 
   /* Light mode active styles */
-  #web-toggle.active,
-  #devops-toggle.active {
+  .filter-button.active {
     @apply bg-white text-slate-900 border-blue-500 border-2 shadow-sm;
   }
 
-  #web-toggle.active .w-5,
-  #devops-toggle.active .w-5 {
+  .filter-button.active .w-5 {
     @apply text-blue-500;
   }
 
   /* Dark mode styles */
-  html.dark #web-toggle,
-  html.dark #devops-toggle {
-    @apply bg-white text-neutral-900 border-white;
+  html.dark .filter-button {
+    @apply bg-neutral-900 text-neutral-50 border border-neutral-900;
   }
 
-  html.dark #web-toggle:hover,
-  html.dark #devops-toggle:hover {
-    @apply bg-black text-white border-neutral-300;
+  html.dark .filter-button:hover {
+    @apply border-neutral-500 bg-white text-neutral-900;
   }
 
-  html.dark #web-toggle:focus,
-  html.dark #devops-toggle:focus {
-    @apply ring-white;
+  html.dark .filter-button:focus {
+    @apply ring-neutral-900;
   }
 
-  html.dark #web-toggle.active,
-  html.dark #devops-toggle.active {
+  html.dark .filter-button.active {
     @apply bg-slate-800 text-white border-blue-500 border-2 shadow-sm;
   }
 </style>
@@ -97,32 +95,71 @@ import Button from "../ui/button.astro";
   const devopsToggle = document.getElementById("devops-toggle");
   const webSkills = document.getElementById("web-skills");
   const devopsSkills = document.getElementById("devops-skills");
-  const skillsTitle = document.querySelector(".skills-title");
+
+  // Function to update page title
+  function updatePageTitle(category) {
+    const skillsTitle = document.querySelector(".skills-title");
+    if (skillsTitle) {
+      if (category === "Web") {
+        skillsTitle.innerHTML =
+          'Web Dev <span class="text-blue-500">Skills</span>';
+      } else {
+        skillsTitle.innerHTML =
+          'DevOps <span class="text-blue-500">Skills</span>';
+      }
+    }
+  }
+
+  // Function to toggle skills sections
+  function toggleSkillsSection(category) {
+    // Update button styles
+    if (category === "Web") {
+      webToggle.classList.add("active");
+      devopsToggle.classList.remove("active");
+      webSkills.classList.remove("hidden");
+      webSkills.classList.add("block", "animate-fadeIn");
+      devopsSkills.classList.add("hidden");
+      devopsSkills.classList.remove("block", "animate-fadeIn");
+      webToggle.setAttribute("aria-pressed", "true");
+      devopsToggle.setAttribute("aria-pressed", "false");
+    } else {
+      devopsToggle.classList.add("active");
+      webToggle.classList.remove("active");
+      devopsSkills.classList.remove("hidden");
+      devopsSkills.classList.add("block", "animate-fadeIn");
+      webSkills.classList.add("hidden");
+      webSkills.classList.remove("block", "animate-fadeIn");
+      devopsToggle.setAttribute("aria-pressed", "true");
+      webToggle.setAttribute("aria-pressed", "false");
+    }
+
+    // Update page title
+    updatePageTitle(category);
+
+    // Update URL with category parameter without page reload
+    const url = new URL(window.location.href);
+    url.searchParams.set("skills", category);
+    window.history.pushState({}, "", url.toString());
+  }
 
   // Add click event listeners
   webToggle.addEventListener("click", () => {
-    webToggle.classList.add("active");
-    devopsToggle.classList.remove("active");
-    webSkills.classList.remove("hidden");
-    webSkills.classList.add("block", "animate-fadeIn");
-    devopsSkills.classList.add("hidden");
-    devopsSkills.classList.remove("block", "animate-fadeIn");
-    webToggle.setAttribute("aria-pressed", "true");
-    devopsToggle.setAttribute("aria-pressed", "false");
-    // Update page title to reflect selected skills
-    skillsTitle.innerHTML = 'Web Dev <span class="text-blue-500">Skills</span>';
+    toggleSkillsSection("Web");
   });
 
   devopsToggle.addEventListener("click", () => {
-    devopsToggle.classList.add("active");
-    webToggle.classList.remove("active");
-    devopsSkills.classList.remove("hidden");
-    devopsSkills.classList.add("block", "animate-fadeIn");
-    webSkills.classList.add("hidden");
-    webSkills.classList.remove("block", "animate-fadeIn");
-    devopsToggle.setAttribute("aria-pressed", "true");
-    webToggle.setAttribute("aria-pressed", "false");
-    // Update page title to reflect selected skills
-    skillsTitle.innerHTML = 'DevOps <span class="text-blue-500">Skills</span>';
+    toggleSkillsSection("DevOps");
+  });
+
+  // Initialize with URL parameter or default to Web filter
+  document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const skillsParam = urlParams.get("skills");
+
+    if (skillsParam === "DevOps") {
+      toggleSkillsSection("DevOps");
+    } else {
+      toggleSkillsSection("Web");
+    }
   });
 </script>

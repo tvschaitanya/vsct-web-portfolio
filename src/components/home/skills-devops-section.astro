@@ -138,6 +138,22 @@ import PageHeading from "../ui/page-heading.astro";
               >Ansible</span
             >
           </div>
+          <!-- AWS CloudFormation -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:amazonaws"
+                class="w-full h-full text-orange-600 dark:text-orange-400"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              CloudFormation
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -201,6 +217,23 @@ import PageHeading from "../ui/page-heading.astro";
             >
           </div>
 
+          <!-- Argo CD -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:argo"
+                class="w-full h-full text-blue-600 dark:text-blue-400"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              Argo CD
+            </span>
+          </div>
+
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
@@ -261,6 +294,24 @@ import PageHeading from "../ui/page-heading.astro";
               >Docker</span
             >
           </div>
+
+          <!-- Podman -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:podman"
+                class="w-full h-full text-purple-600 dark:text-purple-400"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              Podman
+            </span>
+          </div>
+
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
@@ -364,6 +415,24 @@ import PageHeading from "../ui/page-heading.astro";
               >Dynatrace</span
             >
           </div>
+
+          <!-- PagerDuty -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:pagerduty"
+                class="w-full h-full text-green-500 dark:text-green-300"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              PagerDuty
+            </span>
+          </div>
+
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
@@ -403,27 +472,64 @@ import PageHeading from "../ui/page-heading.astro";
         <h3
           class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
         >
-          Scripting & Automation
+          Programming Languages
         </h3>
         <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
           Automating routine tasks and infrastructure management
         </p>
 
         <div class="mt-auto flex flex-wrap gap-2">
+          <!-- Python -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
-              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
             >
               <Icon
                 name="simple-icons:python"
-                class="w-full h-full text-[#3776AB]"
+                class="w-full h-full text-blue-500 dark:text-blue-300"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >Python</span
             >
+              Python
+            </span>
           </div>
+
+          <!-- Java -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="mdi:language-java"
+                class="w-full h-full text-red-600 dark:text-red-400"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              Java
+            </span>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:javascript"
+                class="w-full h-full text-yellow-500 dark:text-yellow-300"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              JavaScript
+            </span>
+          </div>
+
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
@@ -437,6 +543,23 @@ import PageHeading from "../ui/page-heading.astro";
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
               >Shell</span
             >
+          </div>
+
+          <!-- PowerShell -->
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:powershell"
+                class="w-full h-full text-blue-500 dark:text-blue-300"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              PowerShell
+            </span>
           </div>
         </div>
       </div>

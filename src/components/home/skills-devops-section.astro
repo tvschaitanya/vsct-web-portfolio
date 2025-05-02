@@ -21,18 +21,18 @@ import PageHeading from "../ui/page-heading.astro";
           class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
         >
           <Icon
-            name="simple-icons:amazonaws"
+            name="simple-icons:githubactions"
             class="w-full h-full text-blue-500 dark:text-blue-400"
           />
         </div>
         <h3
           class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
         >
-          Cloud Platforms
+          CI/CD
         </h3>
         <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
-          Building and managing scalable cloud infrastructure for modern
-          applications
+          Continuous integration and delivery pipelines for automated testing
+          and deployment
         </p>
 
         <div class="mt-auto flex flex-wrap gap-2">
@@ -41,13 +41,13 @@ import PageHeading from "../ui/page-heading.astro";
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:amazonaws"
-                class="w-full h-full text-[#FF9900]"
+                name="simple-icons:jenkins"
+                class="w-full h-full text-[#D24939]"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >AWS</span
+              >Jenkins</span
             >
           </div>
           <div class="flex flex-col items-center min-w-[5rem]">
@@ -55,27 +55,44 @@ import PageHeading from "../ui/page-heading.astro";
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:googlecloud"
-                class="w-full h-full text-[#4285F4]"
+                name="simple-icons:github"
+                class="w-full h-full text-slate-700 dark:text-slate-300"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >GCP</span
+              >Actions</span
             >
           </div>
+
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              <Icon
+                name="simple-icons:argo"
+                class="w-full h-full text-blue-600 dark:text-blue-400"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+            >
+              Argo CD
+            </span>
+          </div>
+
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:microsoftazure"
-                class="w-full h-full text-[#0078D4]"
+                name="simple-icons:jfrog"
+                class="w-full h-full text-[#41BF47]"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >Azure</span
+              >Artifactory</span
             >
           </div>
         </div>
@@ -138,7 +155,6 @@ import PageHeading from "../ui/page-heading.astro";
               >Ansible</span
             >
           </div>
-          <!-- AWS CloudFormation -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -154,10 +170,25 @@ import PageHeading from "../ui/page-heading.astro";
               CloudFormation
             </span>
           </div>
+          <div class="flex flex-col items-center min-w-[5rem]">
+            <div
+              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+            >
+              <Icon
+                name="simple-icons:pulumi"
+                class="w-full h-full text-[#E27680]"
+              />
+            </div>
+            <span
+              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+              >Pulumi</span
+            >
+          </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
     <div
       class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
@@ -173,18 +204,18 @@ import PageHeading from "../ui/page-heading.astro";
           class="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110"
         >
           <Icon
-            name="simple-icons:githubactions"
+            name="simple-icons:amazonaws"
             class="w-full h-full text-blue-500 dark:text-blue-400"
           />
         </div>
         <h3
           class="text-lg font-semibold text-slate-800 dark:text-slate-100 mb-2"
         >
-          CI/CD
+          Cloud Platforms
         </h3>
         <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
-          Continuous integration and delivery pipelines for automated testing
-          and deployment
+          Building and managing scalable cloud infrastructure for modern
+          applications
         </p>
 
         <div class="mt-auto flex flex-wrap gap-2">
@@ -193,13 +224,13 @@ import PageHeading from "../ui/page-heading.astro";
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:jenkins"
-                class="w-full h-full text-[#D24939]"
+                name="simple-icons:amazonaws"
+                class="w-full h-full text-[#FF9900]"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >Jenkins</span
+              >AWS</span
             >
           </div>
           <div class="flex flex-col items-center min-w-[5rem]">
@@ -207,46 +238,44 @@ import PageHeading from "../ui/page-heading.astro";
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:github"
-                class="w-full h-full text-slate-700 dark:text-slate-300"
+                name="simple-icons:googlecloud"
+                class="w-full h-full text-[#4285F4]"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >Actions</span
+              >GCP</span
             >
           </div>
-
-          <!-- Argo CD -->
-          <div class="flex flex-col items-center min-w-[5rem]">
-            <div
-              class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
-            >
-              <Icon
-                name="simple-icons:argo"
-                class="w-full h-full text-blue-600 dark:text-blue-400"
-              />
-            </div>
-            <span
-              class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-            >
-              Argo CD
-            </span>
-          </div>
-
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
             >
               <Icon
-                name="simple-icons:jfrog"
-                class="w-full h-full text-[#41BF47]"
+                name="simple-icons:microsoftazure"
+                class="w-full h-full text-[#0078D4]"
               />
             </div>
             <span
               class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
-              >Artifactory</span
+              >Azure</span
             >
+          </div>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <div class="flex flex-col items-center min-w-[5rem]">
+              <div
+                class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:translate-y-[-2px]"
+              >
+                <Icon
+                  name="simple-icons:digitalocean"
+                  class="w-full h-full text-[#0080FF]"
+                />
+              </div>
+              <span
+                class="text-xs text-slate-600 dark:text-slate-400 text-center whitespace-nowrap overflow-hidden text-ellipsis max-w-[5rem]"
+                >DigitalOcean</span
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -295,7 +324,6 @@ import PageHeading from "../ui/page-heading.astro";
             >
           </div>
 
-          <!-- Podman -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -344,6 +372,7 @@ import PageHeading from "../ui/page-heading.astro";
       </div>
     </div>
   </div>
+
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-8">
     <div
       class="relative bg-transparent rounded-lg transition-all duration-300 hover:translate-y-[-4px] h-full group"
@@ -416,7 +445,6 @@ import PageHeading from "../ui/page-heading.astro";
             >
           </div>
 
-          <!-- PagerDuty -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -479,7 +507,6 @@ import PageHeading from "../ui/page-heading.astro";
         </p>
 
         <div class="mt-auto flex flex-wrap gap-2">
-          <!-- Python -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -496,7 +523,6 @@ import PageHeading from "../ui/page-heading.astro";
             </span>
           </div>
 
-          <!-- Java -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -513,7 +539,6 @@ import PageHeading from "../ui/page-heading.astro";
             </span>
           </div>
 
-          <!-- JavaScript -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"
@@ -545,7 +570,6 @@ import PageHeading from "../ui/page-heading.astro";
             >
           </div>
 
-          <!-- PowerShell -->
           <div class="flex flex-col items-center min-w-[5rem]">
             <div
               class="w-7 h-7 flex items-center justify-center mb-1 transition-transform duration-200 hover:-translate-y-0.5"

@@ -1,0 +1,510 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import PageHeading from "../../components/ui/page-heading.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<MainLayout title="MLRIT MUN - Model United Nations Conference">
+  <div class="max-w-4xl mx-auto my-12 sm:my-16 px-4 sm:px-6 lg:px-8">
+    <!-- Project Header -->
+    <div class="text-center mb-14">
+      <PageHeading title='MLRIT<span class="text-blue-500">MUN</span>' />
+
+      <p
+        class="text-base md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+      >
+        MLRIT MUN is a platform that inspires young minds to debate global
+        issues and transform the world through effective diplomacy and
+        innovative solutions.
+      </p>
+
+      <!-- Project Tags -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium"
+        >
+          <Icon name="mdi:account-group" class="w-4 h-4 mr-1.5" />
+          <span>Educational Event</span>
+        </span>
+        <span
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium"
+        >
+          <Icon name="mdi:earth" class="w-4 h-4 mr-1.5" />
+          <span>Model United Nations</span>
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a
+          href="https://github.com/tvschaitanya/mlritmun.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center bg-gray-800 dark:bg-gray-700 text-white dark:text-gray-100 rounded-lg px-6 py-3 text-base font-semibold shadow-md hover:scale-105 hover:bg-gray-700 dark:hover:bg-gray-600 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:github" class="w-5 h-5 mr-2" />
+          <span>GitHub Repo</span>
+        </a>
+
+        <a
+          href="https://tvschaitanya.github.io/mlritmun.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center bg-blue-600 hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-6 py-3 text-base font-semibold shadow-md hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:play" class="w-5 h-5 mr-2" />
+          <span>Visit Website</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Metrics -->
+    <div class="mb-12 hidden">
+      <!-- Hide these by default, but keeping structure for consistency -->
+    </div>
+
+    <!-- Featured Image -->
+    <div
+      class="mb-12 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+    >
+      <img
+        src="/assets/images/projects/mlrit-mun.jpeg"
+        alt="MLRIT MUN Conference"
+        class="w-full h-auto"
+      />
+    </div>
+
+    <!-- Problem & Solution -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div
+        class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:alert-circle" class="w-6 h-6 text-red-500 mr-2" />
+          The Challenge
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Limited awareness of global issues among students</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Lack of platforms for developing diplomatic skills</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Difficulty in organizing and promoting educational events</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Need for engaging learning experiences outside classrooms</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:lightbulb-on" class="w-6 h-6 text-blue-500 mr-2" />
+          Our Solution
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Created an immersive Model UN experience with four committees</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Developed comprehensive three-day program with 7 sessions</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Built responsive website for easy registration and information</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Organized networking events for relationship building</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Event Details -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Event Details
+      </h2>
+
+      <div class="space-y-8">
+        <!-- Location & Date -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mb-4"
+        >
+          When & Where
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:map-marker" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200 mb-1">
+              Location
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              MLR Institute of Technology, Dundigal, Hyderabad
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:calendar" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200 mb-1">
+              Date
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              March 28-30, 2019
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:clock" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200 mb-1">
+              Duration
+            </p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              3 Days, 7 Sessions
+            </p>
+          </div>
+        </div>
+
+        <!-- Committees List -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mt-8 mb-4"
+        >
+          Committees
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:account-group" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">UNGA</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              United Nations General Assembly
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:human-greeting" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">UNHRC</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              United Nations Human Rights Council
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:security" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">UNSC</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              United Nations Security Council
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-5 justify-center">
+          <div
+            class="flex-1 max-w-md bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-purple-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 text-purple-500 dark:text-purple-400 mb-3"
+            >
+              <Icon name="mdi:gavel" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">AIPPM</p>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              All India Political Parties Meet
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Event Highlights
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+        {
+          [
+            {
+              icon: "mdi:account-group",
+              title: "Multiple Committees",
+              desc: "Four distinct committees",
+            },
+            {
+              icon: "mdi:forum",
+              title: "Diverse Debates",
+              desc: "International & domestic",
+            },
+            {
+              icon: "mdi:microphone",
+              title: "Opening Ceremony",
+              desc: "Inspirational keynotes",
+            },
+            {
+              icon: "mdi:glass-wine",
+              title: "Networking Night",
+              desc: "Build relationships",
+            },
+            {
+              icon: "mdi:medal",
+              title: "Awards Ceremony",
+              desc: "Recognize excellence",
+            },
+            {
+              icon: "mdi:basketball",
+              title: "Sportzathon",
+              desc: "Extra activities",
+            },
+          ].map((feature) => (
+            <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-200 dark:border-gray-700">
+              <div class="w-12 h-12 flex items-center justify-center mb-3 text-blue-500 dark:text-blue-400">
+                <Icon name={feature.icon} class="w-8 h-8" />
+              </div>
+              <p class="text-base font-bold text-center text-gray-800 dark:text-gray-200 mb-1">
+                {feature.title}
+              </p>
+              <p class="text-sm text-center text-gray-600 dark:text-gray-400">
+                {feature.desc}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Impact / Benefits & Outcomes -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Impact
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:school" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Educational Growth
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Enhanced knowledge of global issues and diplomatic processes
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:account-voice" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Skill Development
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Improved public speaking, negotiation, and leadership abilities
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:handshake" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Network Building
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Valuable connections with like-minded students and professionals
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Learnings / Takeaways-->
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+        Key Takeaways
+      </h2>
+
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Experiential learning</span
+            > provides deeper understanding of complex global issues
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Well-structured events</span
+            > with clear schedules enhance participant experience
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Combining education</span
+            > with networking and social activities creates a holistic experience
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Strategic partnerships</span
+            > with sponsors enhance event resources and participant experience
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mb-8">
+      <a
+        href="https://tvschaitanya.github.io/mlritmun.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-8 py-4 text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+      >
+        <Icon name="mdi:earth" class="w-6 h-6 mr-2" />
+        <span>Visit MLRIT MUN Website</span>
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-gradient {
+      background: linear-gradient(90deg, #60a5fa 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+</style>

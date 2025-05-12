@@ -1,0 +1,593 @@
+---
+import MainLayout from "../../layouts/main.astro";
+import PageHeading from "../../components/ui/page-heading.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<MainLayout title="EPIC Questers - Activity Discovery Platform">
+  <div class="max-w-4xl mx-auto my-12 sm:my-16 px-4 sm:px-6 lg:px-8">
+    <!-- Project Header -->
+    <div class="text-center mb-14">
+      <PageHeading title='EPIC <span class="text-blue-500">Questers</span>' />
+
+      <p
+        class="text-base md:text-xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+      >
+        An interactive platform that helps users discover unique recreational
+        activities and fitness experiences that connect them with others.
+      </p>
+
+      <!-- Project Tags -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium"
+        >
+          <Icon name="mdi:school" class="w-4 h-4 mr-1.5" />
+          <span>Academic Project</span>
+        </span>
+        <span
+          class="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium"
+        >
+          <Icon name="mdi:smartphone" class="w-4 h-4 mr-1.5" />
+          <span>Mobile App Design</span>
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a
+          href="https://www.figma.com/proto/9SuZn91nBolIgs7v5IFVc1/Epic-Questers---Read-Only?page-id=0%3A1&node-id=465-347&p=f&viewport=392%2C601%2C0.18&t=aZX2xwClfhbuEE4P-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=465%3A347&show-proto-sidebar=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center bg-blue-600 hover:bg-blue-500 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-6 py-3 text-base font-semibold shadow-md hover:scale-105 transition-all duration-300 ease-in-out"
+        >
+          <Icon name="mdi:play" class="w-5 h-5 mr-2" />
+          <span>Interactive Prototype</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project Screenshots Gallery -->
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Featured Image -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 transition hover:shadow-xl"
+        >
+          <img
+            src="/assets/images/projects/epic-1.png"
+            class="w-full h-auto object-cover"
+            alt="Project Screenshot 1"
+          />
+        </div>
+        <!-- Second Screenshot -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 transition hover:shadow-xl"
+        >
+          <img
+            src="/assets/images/projects/epic-2.png"
+            class="w-full h-auto object-cover"
+            alt="Project Screenshot 2"
+          />
+        </div>
+        <!-- Third Screenshot -->
+        <div
+          class="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 transition hover:shadow-xl"
+        >
+          <img
+            src="/assets/images/projects/epic-3.png"
+            class="w-full h-auto object-cover"
+            alt="Project Screenshot 3"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Problem & Solution -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div
+        class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:alert-circle" class="w-6 h-6 text-red-500 mr-2" />
+          The Challenge
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Difficulty finding rare and unique recreational activities</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Limited ways to discover activities that connect people</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span>Lack of personalized recommendations based on interests</span>
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:close"
+              class="w-5 h-5 text-red-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Inadequate information about activity locations and costs</span
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg"
+      >
+        <h2
+          class="text-xl font-bold mb-5 flex items-center text-gray-900 dark:text-gray-100"
+        >
+          <Icon name="mdi:lightbulb-on" class="w-6 h-6 text-blue-500 mr-2" />
+          Our Solution
+        </h2>
+
+        <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Curated discovery of unique recreational and fitness activities</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Live streaming and social features to connect with others</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Personalized activity recommendations based on preferences</span
+            >
+          </li>
+          <li class="flex items-start">
+            <Icon
+              name="mdi:check"
+              class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0"
+            />
+            <span
+              >Detailed information including costs, locations, and reviews</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- My Approach -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        How It Works
+      </h2>
+
+      <div class="space-y-8">
+        <!-- Activity Discovery Flow -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mb-4"
+        >
+          Activity Discovery
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:magnify" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Search for activities
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:filter-outline" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Filter by preferences
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:account-group" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Join activities with others
+            </p>
+          </div>
+        </div>
+
+        <!-- Live Sharing Flow -->
+        <h3
+          class="text-lg font-medium text-gray-800 dark:text-gray-200 ml-2 mt-8 mb-4"
+        >
+          Live Activity Sharing
+        </h3>
+        <div class="flex flex-col md:flex-row gap-5">
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:video" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Start a live stream
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:eye" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Watch others' activities
+            </p>
+          </div>
+
+          <div
+            class="flex-1 bg-white dark:bg-gray-800 rounded-lg p-5 shadow-sm text-center border-t-4 border-blue-500"
+          >
+            <div
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-500 dark:text-blue-400 mb-3"
+            >
+              <Icon name="mdi:share-variant" class="w-5 h-5" />
+            </div>
+            <p class="font-medium text-gray-800 dark:text-gray-200">
+              Share experiences
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Key Features
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-5">
+        {
+          [
+            {
+              icon: "mdi:compass",
+              title: "Activity Discovery",
+              desc: "Find unique experiences",
+            },
+            {
+              icon: "mdi:account-group",
+              title: "Social Connections",
+              desc: "Meet like-minded people",
+            },
+            {
+              icon: "mdi:video",
+              title: "Live Streaming",
+              desc: "Share activities in real-time",
+            },
+            {
+              icon: "mdi:map-marker",
+              title: "Location Information",
+              desc: "Detailed activity locations",
+            },
+            {
+              icon: "mdi:lightning-bolt",
+              title: "Activity Tracking",
+              desc: "Monitor your progress",
+            },
+            {
+              icon: "mdi:devices",
+              title: "Device Integration",
+              desc: "Connect fitness trackers",
+            },
+          ].map((feature) => (
+            <div class="flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-300 border border-gray-200 dark:border-gray-700">
+              <div class="w-12 h-12 flex items-center justify-center mb-3 text-blue-500 dark:text-blue-400">
+                <Icon name={feature.icon} class="w-8 h-8" />
+              </div>
+              <p class="text-base font-bold text-center text-gray-800 dark:text-gray-200 mb-1">
+                {feature.title}
+              </p>
+              <p class="text-sm text-center text-gray-600 dark:text-gray-400">
+                {feature.desc}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Tech Stack -->
+    <div class="mb-16 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 shadow-md">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Built With
+      </h2>
+
+      <div class="flex justify-center">
+        <div class="flex flex-col items-center">
+          <div
+            class="w-16 h-16 flex items-center justify-center mb-3 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+          >
+            <Icon name="simple-icons:figma" class="w-8 h-8 text-[#F24E1E]" />
+          </div>
+          <p
+            class="text-sm font-medium text-center text-gray-800 dark:text-gray-200"
+          >
+            Figma
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- User Research Insights -->
+    <div class="mb-16 bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+        User Research Insights
+      </h2>
+
+      <div class="space-y-4">
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Fitness enthusiasts</span
+            > seek new activities that are physically challenging and provide opportunities
+            to compete with others
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Many users</span
+            > are more interested in finding unique outdoor activities rather than
+            physically challenging ones
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Sharing information</span
+            > and experiences with others is highly valued by our target users
+          </p>
+        </div>
+
+        <div class="flex items-start">
+          <Icon
+            name="mdi:lightbulb-on"
+            class="w-6 h-6 text-yellow-500 mt-0.5 mr-3 flex-shrink-0"
+          />
+          <p class="text-gray-700 dark:text-gray-300">
+            <span class="font-medium text-gray-900 dark:text-gray-100"
+              >Location and cost information</span
+            > are critical factors for users when deciding on activities to participate
+            in
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact / Benefits -->
+    <div class="mb-16">
+      <h2
+        class="text-2xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100"
+      >
+        Benefits & Impact
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:binoculars" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Discovery Made Easy
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Simplifies finding unique activities that match personal interests
+            and preferences
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:account-group" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Social Connection
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Creates meaningful connections between people with similar activity
+            interests
+          </p>
+        </div>
+
+        <div
+          class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="text-blue-500 dark:text-blue-400 mb-4 text-center">
+            <Icon name="mdi:heart-pulse" class="w-10 h-10 mx-auto" />
+          </div>
+          <h3
+            class="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 text-center"
+          >
+            Health & Wellbeing
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 text-center">
+            Promotes physical activity and improved mental wellbeing through new
+            experiences
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="mb-16 bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+      <h2
+        class="text-2xl font-bold mb-8 text-gray-900 dark:text-gray-100 text-center"
+      >
+        User Feedback
+      </h2>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 italic mb-4">
+            "Finally an app that helps me find activities I never knew existed!
+            I found a local axe-throwing group and now I'm hooked."
+          </p>
+          <div class="flex items-center">
+            <div
+              class="mr-3 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-300 font-bold"
+            >
+              A
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 dark:text-gray-100">Alex</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Fitness Enthusiast
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="text-yellow-400 flex">
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star" class="w-5 h-5" />
+              <Icon name="mdi:star-half" class="w-5 h-5" />
+            </div>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 italic mb-4">
+            "Love how I can connect my fitness tracker and share my hiking
+            adventures in real-time with the community. It's made finding trail
+            buddies so much easier!"
+          </p>
+          <div class="flex items-center">
+            <div
+              class="mr-3 w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-300 font-bold"
+            >
+              S
+            </div>
+            <div>
+              <p class="font-medium text-gray-900 dark:text-gray-100">Swetha</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Social Fitness Seeker
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mb-8">
+      <a
+        href="https://www.figma.com/proto/9SuZn91nBolIgs7v5IFVc1/Epic-Questers---Read-Only?page-id=0%3A1&node-id=465-347&p=f&viewport=392%2C601%2C0.18&t=aZX2xwClfhbuEE4P-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=465%3A347&show-proto-sidebar=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white rounded-lg px-8 py-4 text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105"
+      >
+        <Icon name="mdi:rocket-launch" class="w-6 h-6 mr-2" />
+        <span>Try EPIC Questers</span>
+      </a>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-gradient {
+      background: linear-gradient(90deg, #60a5fa 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+</style>
